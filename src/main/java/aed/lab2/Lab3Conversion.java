@@ -82,10 +82,10 @@ public class Lab3Conversion {
                 result.append(c);
             }
         }
-
-        for (int i = 0; i <=stack.size()+1 ; i++) {
+        
+        for (int i = 0; i <= stack.size() ; i++) {
             Character dato = stack.pop();
-            result.append(dato);
+            result.append(dato);     
         }
         return result.reverse().toString();
     }
