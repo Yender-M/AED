@@ -18,5 +18,5 @@
         <maven.compiler.target>18</maven.compiler.target>
         <exec.mainClass>aed.lab2.Lab2</exec.mainClass>
     </properties>
-    <name>Lab3</name>
+    <name>AED_Proyec</name>
 </project>
