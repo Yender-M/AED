@@ -537,6 +537,11 @@ public class Laboratorio5 extends javax.swing.JPanel {
         String carrera = txtbCarrera.getText();
         String carnet = txtbCarnet.getText();
         
+        if(alumno.isEmpty() || carrera.isEmpty() || carnet.isEmpty())
+        {
+            return;
+        }
+        
         ejercicio1.insertar(alumno, carrera, carnet);
         
         DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
