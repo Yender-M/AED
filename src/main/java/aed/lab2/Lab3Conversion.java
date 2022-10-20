@@ -4,7 +4,6 @@
  */
 package aed.lab2;
 
-import java.util.Arrays;
 import java.util.Stack;
 import javax.swing.*;
 
