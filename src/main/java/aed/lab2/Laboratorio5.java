@@ -78,6 +78,8 @@ public class Laboratorio5 extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        tpanelLaboratorio5.setPreferredSize(new java.awt.Dimension(580, 380));
+
         panelEjercicio1.setBackground(new java.awt.Color(255, 255, 255));
         panelEjercicio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -426,15 +428,11 @@ public class Laboratorio5 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tpanelLaboratorio5, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(tpanelLaboratorio5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tpanelLaboratorio5, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(tpanelLaboratorio5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -51,6 +51,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         btnLaboratorio3 = new javax.swing.JButton();
         btnLab4 = new javax.swing.JButton();
         btnLab5 = new javax.swing.JButton();
+        btnLab6 = new javax.swing.JButton();
         panelSuperior = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
         txtMetodo = new javax.swing.JLabel();
@@ -178,6 +179,23 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnLab6.setBackground(new java.awt.Color(189, 165, 240));
+        btnLab6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        btnLab6.setForeground(new java.awt.Color(255, 255, 255));
+        btnLab6.setText("Lab 6");
+        btnLab6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnLab6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLab6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLab6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLab6MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelIzquierdoLayout = new javax.swing.GroupLayout(panelIzquierdo);
         panelIzquierdo.setLayout(panelIzquierdoLayout);
         panelIzquierdoLayout.setHorizontalGroup(
@@ -189,6 +207,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             .addComponent(btnLaboratorio3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnLab4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnLab5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnLab6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelIzquierdoLayout.setVerticalGroup(
             panelIzquierdoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +225,9 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addComponent(btnLab4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLab5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 135, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLab6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 92, Short.MAX_VALUE))
         );
 
         panelPrincipal.add(panelIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 420));
@@ -452,6 +473,18 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     private void btnLab5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab5MouseExited
         btnLab5.setBackground(botonViejo);
     }//GEN-LAST:event_btnLab5MouseExited
+
+    private void btnLab6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLab6MouseClicked
+
+    private void btnLab6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseEntered
+        btnLab6.setBackground(botonNuevo);
+    }//GEN-LAST:event_btnLab6MouseEntered
+
+    private void btnLab6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseExited
+        btnLab5.setBackground(botonViejo);
+    }//GEN-LAST:event_btnLab6MouseExited
     //</editor-fold>
         
     /**
@@ -495,6 +528,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnLab3;
     private javax.swing.JButton btnLab4;
     private javax.swing.JButton btnLab5;
+    private javax.swing.JButton btnLab6;
     private javax.swing.JButton btnLaboratorio3;
     private javax.swing.JButton btnSalir;
     private javax.swing.JPanel panelDinamico;
