@@ -483,7 +483,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         panelDinamico.revalidate();
         panelDinamico.repaint();
         
-        txtMetodo.setText("Laboratorio 5");
+        txtMetodo.setText("Laboratorio 6");
     }//GEN-LAST:event_btnLab6MouseClicked
 
     private void btnLab6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseEntered

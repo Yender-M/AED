@@ -13,6 +13,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
     /**
      * Creates new form Laboratorio6
      */
+    
+    int indice = 1;
+    
     public Laboratorio6() {
         initComponents();
     }
@@ -27,6 +30,11 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        txtNodo = new javax.swing.JLabel();
+        btnNodo = new javax.swing.JTextField();
+        txtLado = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
@@ -47,10 +55,60 @@ public class Laboratorio6 extends javax.swing.JPanel {
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
+
+        txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtNodo.setForeground(new java.awt.Color(0, 0, 0));
+        txtNodo.setText("Raíz del árbol:");
+        add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+
+        btnNodo.setBackground(new java.awt.Color(102, 102, 102));
+        btnNodo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnNodo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNodo.setText("1");
+        btnNodo.setEnabled(false);
+        add(btnNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 40, -1));
+
+        txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtLado.setForeground(new java.awt.Color(0, 0, 0));
+        txtLado.setText("¿Tiene un hijo a la izquierda?");
+        add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(153, 102, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Sí");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 80, 30));
+
+        jButton2.setBackground(new java.awt.Color(153, 102, 255));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("No");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 80, 30));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        
+    }//GEN-LAST:event_jButton2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField btnNodo;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel txtLado;
+    private javax.swing.JLabel txtNodo;
     // End of variables declaration//GEN-END:variables
 }
