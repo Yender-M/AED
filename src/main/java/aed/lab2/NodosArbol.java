@@ -9,5 +9,11 @@ package aed.lab2;
  * @author pavel
  */
 public class NodosArbol {
+    /*Object dato;
+    Nodo siguiente;
     
+    public NodosArbol(Object x){
+        dato = x;
+        siguiente = null;
+    }*/
 }

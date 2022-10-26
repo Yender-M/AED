@@ -328,7 +328,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
 
-        this.setLocation(x - xMouse, y - yMouse);
+        this.setLocation(x - 170 - xMouse, y - yMouse);
     }//GEN-LAST:event_panelSuperiorMouseDragged
     //</editor-fold>
     
@@ -475,7 +475,15 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLab5MouseExited
 
     private void btnLab6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseClicked
-        // TODO add your handling code here:
+        Laboratorio6 lab6 = new Laboratorio6();
+        lab6.setSize(580, 380);
+        
+        panelDinamico.removeAll();
+        panelDinamico.add(lab6, BorderLayout.CENTER);
+        panelDinamico.revalidate();
+        panelDinamico.repaint();
+        
+        txtMetodo.setText("Laboratorio 5");
     }//GEN-LAST:event_btnLab6MouseClicked
 
     private void btnLab6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseEntered
