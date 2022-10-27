@@ -29,85 +29,103 @@ public class Laboratorio6 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panelBoard = new javax.swing.JPanel();
         txtNodo = new javax.swing.JLabel();
         btnNodo = new javax.swing.JTextField();
         txtLado = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnSi = new javax.swing.JButton();
+        btnNo = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(251, 247, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 255)));
+        panelBoard.setBackground(new java.awt.Color(251, 247, 255));
+        panelBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 255)));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelBoardLayout = new javax.swing.GroupLayout(panelBoard);
+        panelBoard.setLayout(panelBoardLayout);
+        panelBoardLayout.setHorizontalGroup(
+            panelBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 558, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelBoardLayout.setVerticalGroup(
+            panelBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 288, Short.MAX_VALUE)
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
+        add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
 
         txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtNodo.setForeground(new java.awt.Color(0, 0, 0));
-        txtNodo.setText("Raíz del árbol:");
-        add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+        txtNodo.setText("Nombre de la raíz:");
+        add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         btnNodo.setBackground(new java.awt.Color(102, 102, 102));
         btnNodo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnNodo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNodo.setText("1");
-        btnNodo.setEnabled(false);
-        add(btnNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 40, -1));
+        btnNodo.setText("A");
+        add(btnNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
 
         txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtLado.setForeground(new java.awt.Color(0, 0, 0));
         txtLado.setText("¿Tiene un hijo a la izquierda?");
-        add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
+        add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(153, 102, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Sí");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnSi.setBackground(new java.awt.Color(153, 102, 255));
+        btnSi.setForeground(new java.awt.Color(255, 255, 255));
+        btnSi.setText("Sí");
+        btnSi.setEnabled(false);
+        btnSi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnSiMouseClicked(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 80, 30));
+        add(btnSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 80, 30));
 
-        jButton2.setBackground(new java.awt.Color(153, 102, 255));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("No");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnNo.setBackground(new java.awt.Color(153, 102, 255));
+        btnNo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNo.setText("No");
+        btnNo.setEnabled(false);
+        btnNo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btnNoMouseClicked(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 80, 30));
+        add(btnNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 80, 30));
+
+        btnAceptar.setBackground(new java.awt.Color(153, 102, 255));
+        btnAceptar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAceptar.setText("Aceptar");
+        btnAceptar.setEnabled(false);
+        btnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAceptarMouseClicked(evt);
+            }
+        });
+        add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnSiMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
         
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_btnNoMouseClicked
+
+    private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAceptarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnNo;
     private javax.swing.JTextField btnNodo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btnSi;
+    private javax.swing.JPanel panelBoard;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
     // End of variables declaration//GEN-END:variables
