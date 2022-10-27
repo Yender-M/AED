@@ -14,7 +14,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
      * Creates new form Laboratorio6
      */
     
-    int indice = 1;
+    int vueltas = 0;
     
     public Laboratorio6() {
         initComponents();
@@ -31,7 +31,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         panelBoard = new javax.swing.JPanel();
         txtNodo = new javax.swing.JLabel();
-        btnNodo = new javax.swing.JTextField();
+        txtbNodo = new javax.swing.JTextField();
         txtLado = new javax.swing.JLabel();
         btnSi = new javax.swing.JButton();
         btnNo = new javax.swing.JButton();
@@ -59,23 +59,23 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtNodo.setForeground(new java.awt.Color(0, 0, 0));
-        txtNodo.setText("Nombre de la raíz:");
+        txtNodo.setText("Nombre del nodo:");
         add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        btnNodo.setBackground(new java.awt.Color(102, 102, 102));
-        btnNodo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnNodo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNodo.setText("A");
-        add(btnNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
+        txtbNodo.setBackground(new java.awt.Color(102, 102, 102));
+        txtbNodo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtbNodo.setForeground(new java.awt.Color(255, 255, 255));
+        txtbNodo.setText("A");
+        add(txtbNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
 
         txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtLado.setForeground(new java.awt.Color(0, 0, 0));
-        txtLado.setText("¿Tiene un hijo a la izquierda?");
         add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         btnSi.setBackground(new java.awt.Color(153, 102, 255));
         btnSi.setForeground(new java.awt.Color(255, 255, 255));
-        btnSi.setText("Sí");
+        btnSi.setBorderPainted(false);
+        btnSi.setContentAreaFilled(false);
         btnSi.setEnabled(false);
         btnSi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -86,7 +86,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         btnNo.setBackground(new java.awt.Color(153, 102, 255));
         btnNo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNo.setText("No");
+        btnNo.setBorderPainted(false);
+        btnNo.setContentAreaFilled(false);
         btnNo.setEnabled(false);
         btnNo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,7 +99,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnAceptar.setBackground(new java.awt.Color(153, 102, 255));
         btnAceptar.setForeground(new java.awt.Color(255, 255, 255));
         btnAceptar.setText("Aceptar");
-        btnAceptar.setEnabled(false);
         btnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAceptarMouseClicked(evt);
@@ -108,25 +108,78 @@ public class Laboratorio6 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        
+        if(vueltas == 1){
+            vueltas = vueltas + 1;
+            
+            txtLado.setText("¿Tiene un hijo a la derecha?");
+        }
+        else{
+            vuelta2();
+            vueltas = vueltas + 1;
+        }
     }//GEN-LAST:event_btnSiMouseClicked
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
-        
+        if(vueltas == 1){
+            vueltas = vueltas + 1;
+            
+            txtLado.setText("¿Tiene un hijo a la derecha?");
+        }
+        else{
+            vuelta2();
+            vueltas = vueltas + 1;
+        }
     }//GEN-LAST:event_btnNoMouseClicked
 
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
-        // TODO add your handling code here:
+        txtLado.setText("¿Tiene un hijo a la izquierda?");
+        
+        btnSi.setOpaque(true);
+        btnSi.setContentAreaFilled(true);
+        btnSi.setBorderPainted(true);
+        btnSi.setEnabled(true);
+        btnSi.setText("Sí");
+        
+        btnNo.setOpaque(true);
+        btnNo.setContentAreaFilled(true);
+        btnNo.setBorderPainted(true);
+        btnNo.setEnabled(true);
+        btnNo.setText("No");
+        
+        txtbNodo.setEditable(false);
+        btnAceptar.setEnabled(false);
+        
+        vueltas = 1;
+        //Pasarle alguna variable al método de la clase CrearArbol
     }//GEN-LAST:event_btnAceptarMouseClicked
 
+    private void vuelta2(){
+        txtLado.setText("");
+        
+        btnSi.setOpaque(false);
+        btnSi.setContentAreaFilled(false);
+        btnSi.setBorderPainted(false);
+        btnSi.setEnabled(false);
+        btnSi.setText("");
+
+        btnNo.setOpaque(false);
+        btnNo.setContentAreaFilled(false);
+        btnNo.setBorderPainted(false);
+        btnNo.setEnabled(false);
+        btnNo.setText("");
+
+        txtbNodo.setText("");
+        txtbNodo.setEditable(true);
+        btnAceptar.setEnabled(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnNo;
-    private javax.swing.JTextField btnNodo;
     private javax.swing.JButton btnSi;
     private javax.swing.JPanel panelBoard;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
+    private javax.swing.JTextField txtbNodo;
     // End of variables declaration//GEN-END:variables
 }

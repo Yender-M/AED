@@ -31,7 +31,7 @@ public class NodosArbol {
         return izq;
     }
     
-    public void setIzqu(Nodo izqu){
+    public void setIzq(Nodo izq){
         this.izq = izq;
     }
     
