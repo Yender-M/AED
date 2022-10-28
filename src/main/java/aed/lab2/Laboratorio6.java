@@ -15,6 +15,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
      */
     
     int vueltas = 0;
+    Object dato;
+    Nodo izq, der;
+    NodosArbol nodoarbol = new NodosArbol(dato, izq, der);
     
     public Laboratorio6() {
         initComponents();
@@ -110,6 +113,10 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         if(vueltas == 1){
             vueltas = vueltas + 1;
+            
+            txtNodo.setText("Nombre del hijo:");
+            txtbNodo.setEnabled(true);
+            btnAceptar.setEnabled(true);
             
             txtLado.setText("¿Tiene un hijo a la derecha?");
         }

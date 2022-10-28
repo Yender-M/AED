@@ -491,7 +491,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLab6MouseEntered
 
     private void btnLab6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLab6MouseExited
-        btnLab5.setBackground(botonViejo);
+        btnLab6.setBackground(botonViejo);
     }//GEN-LAST:event_btnLab6MouseExited
     //</editor-fold>
         
