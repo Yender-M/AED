@@ -115,29 +115,26 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         String texto = txtbNodo.getText();
         //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
-        if(vueltas == 1 && texto.isEmpty() == false){
-            vueltas = 1;
+        if(texto.isEmpty() == false){
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
+            
+            vueltas = vueltas - 1;
             
             nodoarbol.dato = txtbNodo.getText();
             
             txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
-        } //Señala que está vacío
-        else if(texto.isBlank() == true && vueltas != 2){
+        }
+        else if(texto.isEmpty() == true){
+            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
             txtNodo.setForeground(Color.red);
-        } //ESTO PODRÍA PERFECTAMENTE NO IR
-        else{
-            txtNodo.setForeground(Color.black);
-            vuelta2();
-            vueltas = vueltas + 1;
         }
     }//GEN-LAST:event_btnSiMouseClicked
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
-        if(vueltas == 1){
+        if(vueltas <= 1){
             vueltas = vueltas + 1;
-            
+            txtNodo.setForeground(Color.black);
             txtLado.setText("¿Tiene un hijo a la derecha?");
         }
         else{
@@ -162,6 +159,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnNo.setText("No");
         
         txtbNodo.setText("");
+        txtNodo.setForeground(Color.black);
         btnAceptar.setEnabled(false);
         
         vueltas = 1;
