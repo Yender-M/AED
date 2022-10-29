@@ -4,6 +4,8 @@
  */
 package aed.lab2;
 
+import java.awt.Color;
+
 /**
  *
  * @author pavel
@@ -111,16 +113,22 @@ public class Laboratorio6 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        if(vueltas == 1){
-            vueltas = vueltas + 1;
+        String texto = txtbNodo.getText();
+        //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
+        if(vueltas == 1 && texto.isEmpty() == false){
+            vueltas = 1;
+            txtbNodo.setText("");
+            txtNodo.setForeground(Color.black);
             
-            txtNodo.setText("Nombre del hijo:");
-            txtbNodo.setEnabled(true);
-            btnAceptar.setEnabled(true);
+            nodoarbol.dato = txtbNodo.getText();
             
-            txtLado.setText("¿Tiene un hijo a la derecha?");
-        }
+            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
+        } //Señala que está vacío
+        else if(texto.isBlank() == true && vueltas != 2){
+            txtNodo.setForeground(Color.red);
+        } //ESTO PODRÍA PERFECTAMENTE NO IR
         else{
+            txtNodo.setForeground(Color.black);
             vuelta2();
             vueltas = vueltas + 1;
         }
@@ -153,13 +161,15 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnNo.setEnabled(true);
         btnNo.setText("No");
         
-        txtbNodo.setEditable(false);
+        txtbNodo.setText("");
         btnAceptar.setEnabled(false);
         
         vueltas = 1;
         //Pasarle alguna variable al método de la clase CrearArbol
     }//GEN-LAST:event_btnAceptarMouseClicked
 
+    // <editor-fold defaultstate="collapsed" desc="Vuelta2">
+    //Vuelta 2
     private void vuelta2(){
         txtLado.setText("");
         
@@ -179,6 +189,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         txtbNodo.setEditable(true);
         btnAceptar.setEnabled(true);
     }
+    //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;

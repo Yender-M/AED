@@ -118,11 +118,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         btnAgregar1.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar1.setText("Agregar");
         btnAgregar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAgregar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregar1MouseClicked(evt);
-            }
-        });
         btnAgregar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregar1ActionPerformed(evt);
@@ -183,11 +178,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         btnAgregar2.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar2.setText("Agregar");
         btnAgregar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAgregar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregar2MouseClicked(evt);
-            }
-        });
         btnAgregar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregar2ActionPerformed(evt);
@@ -256,11 +246,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         btnAgregar3.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar3.setText("Agregar");
         btnAgregar3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAgregar3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregar3MouseClicked(evt);
-            }
-        });
         btnAgregar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregar3ActionPerformed(evt);
@@ -332,11 +317,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         btnEliminar4.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar4.setText("Eliminar");
         btnEliminar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnEliminar4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEliminar4MouseClicked(evt);
-            }
-        });
         btnEliminar4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminar4ActionPerformed(evt);
@@ -363,11 +343,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         btnAgregar4.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar4.setText("Agregar");
         btnAgregar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAgregar4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregar4MouseClicked(evt);
-            }
-        });
         btnAgregar4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregar4ActionPerformed(evt);
@@ -436,22 +411,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregar1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregar1MouseClicked
-
-    private void btnAgregar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregar2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregar2MouseClicked
-
-    private void btnAgregar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregar3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregar3MouseClicked
-
-    private void btnEliminar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar4MouseClicked
-
     private void btnAgregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar2ActionPerformed
         int num = Integer.parseInt(txtbNumero.getText());
         ejercicio2.lisNum.add(num);
@@ -510,10 +469,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         else
             JOptionPane.showMessageDialog(null, "Pila vacia");
     }//GEN-LAST:event_btnEliminar4ActionPerformed
-
-    private void btnAgregar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregar4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregar4MouseClicked
 
     private void btnAgregar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar4ActionPerformed
         String cadena = txtbPila.getText();
