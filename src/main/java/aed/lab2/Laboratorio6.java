@@ -19,7 +19,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     int vueltas = 0;
     Object dato;
     Nodo izq, der;
-    NodosArbol nodoarbol = new NodosArbol(dato, izq, der);
+    Nodo nodoarbol = new Nodo(dato, izq, der);
     
     public Laboratorio6() {
         initComponents();

@@ -323,15 +323,6 @@ public class Laboratorio4 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtbPrefijaActionPerformed
 
-    /*
-    static void Lab3Conversion(String infija,JLabel mostrarPre, JLabel mostrarInfi){
-       
-       mostrarPre.setText("Notación prefija: " + infijaAPrefija(infija));
-       mostrarInfi.setText("Notación postfija: " + infijaAPostfija(infija));
-     
-    }*/
-    
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInsertar;
