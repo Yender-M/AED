@@ -5,11 +5,11 @@
 package aed.lab2;
 
 //Lab 4 — Colas circulares
-public class Nodo {
+public class NodoLab4 {
     Object dato;
-    Nodo siguiente;
+    NodoLab4 siguiente;
     
-    public Nodo(Object x){
+    public NodoLab4(Object x){
         dato = x;
         siguiente = null;
     }
