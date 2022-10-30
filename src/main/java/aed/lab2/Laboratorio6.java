@@ -42,6 +42,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnSi = new javax.swing.JButton();
         btnNo = new javax.swing.JButton();
         btnAceptar = new javax.swing.JButton();
+        txtNodoActual = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
@@ -109,19 +110,22 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
         });
         add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, 30));
+
+        txtNodoActual.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtNodoActual.setText("Nodo actual:");
+        add(txtNodoActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         String texto = txtbNodo.getText();
         //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
         if(texto.isEmpty() == false){
-            txtbNodo.setText("");
-            txtNodo.setForeground(Color.black);
+            nodoarbol.dato = txtbNodo.getText();
+            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
             
             vueltas = vueltas - 1;
-            
-            nodoarbol.dato = txtbNodo.getText();
-            
+            txtbNodo.setText("");
+            txtNodo.setForeground(Color.black);
             txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
         }
         else if(texto.isEmpty() == true){
@@ -196,6 +200,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private javax.swing.JPanel panelBoard;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
+    private javax.swing.JLabel txtNodoActual;
     private javax.swing.JTextField txtbNodo;
     // End of variables declaration//GEN-END:variables
 }
