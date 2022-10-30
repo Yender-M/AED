@@ -18,7 +18,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
     
     int vueltas = 0;
     Object dato;
-    Nodo izq, der;
+    Nodo izq;
+    Nodo der;
     Nodo nodoarbol = new Nodo(dato, izq, der);
     
     public Laboratorio6() {
@@ -63,7 +64,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
 
         txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtNodo.setForeground(new java.awt.Color(0, 0, 0));
         txtNodo.setText("Nombre del nodo:");
         add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
@@ -74,7 +74,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         add(txtbNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
 
         txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtLado.setForeground(new java.awt.Color(0, 0, 0));
         add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         btnSi.setBackground(new java.awt.Color(153, 102, 255));
@@ -185,6 +184,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         txtbNodo.setText("");
         txtbNodo.setEditable(true);
+        txtNodo.setForeground(Color.black);
         btnAceptar.setEnabled(true);
     }
     //</editor-fold>
