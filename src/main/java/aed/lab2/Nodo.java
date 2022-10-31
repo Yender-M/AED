@@ -19,7 +19,7 @@ public class Nodo {
         this.dato = dato;
     }
     
-    public Object getIzq(){
+    public Nodo getIzq(){
         return izq;
     }
     
@@ -27,7 +27,7 @@ public class Nodo {
         this.izq = izq;
     }
     
-    public Object getDer(){
+    public Nodo getDer(){
         return der;
     }
     
