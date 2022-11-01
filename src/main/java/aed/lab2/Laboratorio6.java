@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package aed.lab2;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Rectangle;
-import javax.swing.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
-/**
- *
- * @author pavel
- */
 public class Laboratorio6 extends javax.swing.JPanel {
 
     /**
@@ -25,22 +16,28 @@ public class Laboratorio6 extends javax.swing.JPanel {
     Nodo d;
     Nodo nodoarbol = new Nodo(nom, i, d);
     int h = 0;
-    int x = 280, y = 10;
+    int x = 280, y = 90;
     String txtizq = "¿Tiene un hijo a la izquierda?";
     String txtder = "¿Tiene un hijo en la derecha?";
     
     public Laboratorio6() {
         initComponents();
     }
-
+      
+    public void paint(Graphics g){
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D) g;
+        dibujarArbol(g2d, nodoarbol, x, y);
+    }
+    
     private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         panelBoard = new javax.swing.JPanel();
-        panelBoard1 = new javax.swing.JPanel();
         txtNodo = new javax.swing.JLabel();
         txtbNodo = new javax.swing.JTextField();
         txtLado = new javax.swing.JLabel();
@@ -56,31 +53,15 @@ public class Laboratorio6 extends javax.swing.JPanel {
         panelBoard.setBackground(new java.awt.Color(251, 247, 255));
         panelBoard.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 255)));
 
-        panelBoard1.setBackground(new java.awt.Color(251, 247, 255));
-        panelBoard1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 255)));
-
-        javax.swing.GroupLayout panelBoard1Layout = new javax.swing.GroupLayout(panelBoard1);
-        panelBoard1.setLayout(panelBoard1Layout);
-        panelBoard1Layout.setHorizontalGroup(
-            panelBoard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 558, Short.MAX_VALUE)
-        );
-        panelBoard1Layout.setVerticalGroup(
-            panelBoard1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout panelBoardLayout = new javax.swing.GroupLayout(panelBoard);
         panelBoard.setLayout(panelBoardLayout);
         panelBoardLayout.setHorizontalGroup(
             panelBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBoardLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(panelBoard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 558, Short.MAX_VALUE)
         );
         panelBoardLayout.setVerticalGroup(
             panelBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBoard1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 288, Short.MAX_VALUE)
         );
 
         add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
@@ -134,7 +115,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         txtNodoActual.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtNodoActual.setText("Nodo actual:");
-        add(txtNodoActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        add(txtNodoActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
@@ -181,6 +162,12 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
             else if(txtLado.getText().equalsIgnoreCase(txtder)){
                 h = h - 1;
+                if(nodoarbol.getDer() != null){
+                    x = x - 30; y = y - 30;
+                }
+                else if(nodoarbol.getDer() == null && nodoarbol.getIzq() != null){
+                    x = x + 30; y = y - 30;
+                }
             }
         }
         else{
@@ -190,7 +177,11 @@ public class Laboratorio6 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnNoMouseClicked
 
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
+        String texto = txtbNodo.getText();
         if(vueltas == 0){
+            nodoarbol.setDato(texto);
+            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
+            
             txtLado.setText("¿Tiene un hijo a la izquierda?");
             txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
             
@@ -209,26 +200,28 @@ public class Laboratorio6 extends javax.swing.JPanel {
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
             btnAceptar.setEnabled(false);
-
+            
             h = 1;
-            x = 280; y = 10;
+            x = 280; y = 80;
             vueltas = 1;
             //Pasarle alguna variable al método de la clase CrearArbol
         }
-        else if(vueltas > 0){
+        else if(vueltas > 2){
             
         }
     }//GEN-LAST:event_btnAceptarMouseClicked
 
-    private void btnsi(int lado, String dato, Nodo nd){
+    private void btnsi(int lado, String nomn, Nodo nd){
         if(h == 0){
-            //Falta dehabilitar los demás componentes activos
+            txtbNodo.setEnabled(false);
+            btnAceptar.setEnabled(false);
             vuelta2();
         }
         else if(lado == 1 && h > 0){ //Si agrega a la izquierda
             nd.setIzq(nd);
             h = h + 1;
             x = x - 30; y = y + 30;
+            //paint(x, y);
             repintarArbol();
         }
         else if(lado == 2 && h > 0){ //Si agrega a la derecha
@@ -236,24 +229,36 @@ public class Laboratorio6 extends javax.swing.JPanel {
                 nd.setDer(nd);
                 h = h + 1;
                 x = x + 30; y = y + 30;
+                //paint(x, y);
                 repintarArbol();
             }
             else{ //Si había algún nodo
                 h = h - 1;
+                if(h == 0){
+                txtbNodo.setEnabled(false);
+                btnAceptar.setEnabled(false);
+                vuelta2();
+                }
             }
         }
     }
     
+    private void dibujarArbol(Graphics2D g, Nodo n, int x, int y) 
+    {
+        g.drawString(n.dato.toString(), x + 4, y + 11);
+        g.drawOval(x, y, 15, 15);
+   }
+    
     private void repintarArbol() {
         this.panelBoard.removeAll();
-        Rectangle tamaño = this.panelBoard1.getBounds();
+        /*Rectangle tamaño = this.panelBoard1.getBounds();
         this.panelBoard1 = null;
         this.panelBoard1 = new JPanel();
         this.panelBoard.add(this.panelBoard1, JLayeredPane.DEFAULT_LAYER);
         this.panelBoard1.setVisible(true);
         this.panelBoard1.setBounds(tamaño);
         this.panelBoard1.setEnabled(false);
-        this.panelBoard1.add(this.simulador.getDibujo(), BorderLayout.CENTER);
+        this.panelBoard1.add(this.simulador.getDibujo(), BorderLayout.CENTER);*/
     }
     
     // <editor-fold defaultstate="collapsed" desc="Vuelta2">
@@ -285,7 +290,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private javax.swing.JButton btnNo;
     private javax.swing.JButton btnSi;
     private javax.swing.JPanel panelBoard;
-    private javax.swing.JPanel panelBoard1;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
     private javax.swing.JLabel txtNodoActual;
