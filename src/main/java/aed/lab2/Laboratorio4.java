@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package aed.lab2;
 
 import java.util.Stack;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author pavel
- */
+
 public class Laboratorio4 extends javax.swing.JPanel {
 
  
@@ -256,10 +250,15 @@ public class Laboratorio4 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNotacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNotacionMouseClicked
-        if(txtbNotacion.getText().length() > 0)
+        String cadena = txtbNotacion.getText();
+        if(cadena.isEmpty())
         {
-            Lab3Conversion.convertir(txtbNotacion.getText(), txtbPrefija, txtbPosfija);
+            JOptionPane.showMessageDialog(null, "El campo de texto  no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
+        
+        Lab3Conversion.convertir(txtbNotacion.getText(), txtbPrefija, txtbPosfija);
+        
         txtbNotacion.setText("");
     }//GEN-LAST:event_btnNotacionMouseClicked
 
@@ -281,26 +280,31 @@ public class Laboratorio4 extends javax.swing.JPanel {
 
     
     private void btnPushMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPushMouseClicked
-        /*if(txtbNotacion.getText().length() > 0)
-        {*/
+        String cadena = txtbPila.getText();
+        if(cadena.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto  no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         
         //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
         DefaultTableModel model = (DefaultTableModel) tablePila.getModel();
         model.setColumnCount(1);
         model.setRowCount(19);
 
-        String cadena = txtbPila.getText();
         pila.push(cadena);
 
         tablePila.setValueAt(pila.pila[pila.tope], pila.tope, 0);
-        //txtaPila.setText(pila.pila[pila.tope]);
         txtbPila.setText("");
-       // }
     }//GEN-LAST:event_btnPushMouseClicked
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        String dato;
-        dato = txtbCola.getText();
+        String dato = txtbCola.getText();
+        if(dato.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto  no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         cola.insertar(dato);
         txtaSalida.setText(cola.toString());
         txtbCola.setText("");

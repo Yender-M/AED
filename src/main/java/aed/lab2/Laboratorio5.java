@@ -4,15 +4,9 @@ import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author pavel
- */
+
 public class Laboratorio5 extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Laboratorio5
-     */
     public Laboratorio5() {
         initComponents();
     }
@@ -412,7 +406,14 @@ public class Laboratorio5 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar2ActionPerformed
-        int num = Integer.parseInt(txtbNumero.getText());
+        String numero = txtbNumero.getText();
+        if(numero.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto  no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        int num = Integer.parseInt(numero);
         ejercicio2.lisNum.add(num);
         
         DefaultTableModel model = (DefaultTableModel) tableEj2.getModel();
@@ -428,32 +429,32 @@ public class Laboratorio5 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregar2ActionPerformed
 
     private void btnAgregar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar3ActionPerformed
-       /* if (txtbNombre3.getText() != "" && txtbNumEmp.getText() != "" && txtbSalario.getText() != "")
-        {*/
-            String nombre = txtbNombre4.getText();
-            String numeroEmple = txtbNumEmp.getText();
-            float salario =Integer.parseInt(txtbSalario.getText());
-            ejercicio3.insertar(nombre, numeroEmple, salario);
-            ejercicio3.calNomina(ejercicio3.Salario);
-            
-            DefaultTableModel model = (DefaultTableModel) tableEj3.getModel();
-            model.setRowCount(ejercicio3.nom.size());
-            
-            tableEj3.setValueAt(ejercicio3.nom.get(ejercicio3.nom.size()-1), x+1 , 0);
-            tableEj3.setValueAt(ejercicio3.nEmple.get(ejercicio3.nEmple.size()-1), x+1, 1);
-            tableEj3.setValueAt(ejercicio3.Salario.get(ejercicio3.Salario.size()-1), x+1, 2);
-            x++;
-            
-            txtbNomina.setText(String.valueOf(ejercicio3.nomina));
-            
-            txtbNombre4.setText("");
-            txtbNumEmp.setText("");
-            txtbSalario.setText("");
-        /*}
-        else
+        String nombre = txtbNombre4.getText();
+        String numeroEmple = txtbNumEmp.getText();
+        
+        if(nombre.isEmpty() || numeroEmple.isEmpty())
         {
-            JOptionPane.showMessageDialog(null, "Uno o varios campos aun no llenos.");
-        }*/
+            JOptionPane.showMessageDialog(null, "Uno o varios campos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        float salario =Integer.parseInt(txtbSalario.getText());
+        ejercicio3.insertar(nombre, numeroEmple, salario);
+        ejercicio3.calNomina(ejercicio3.Salario);
+
+        DefaultTableModel model = (DefaultTableModel) tableEj3.getModel();
+        model.setRowCount(ejercicio3.nom.size());
+
+        tableEj3.setValueAt(ejercicio3.nom.get(ejercicio3.nom.size()-1), x+1 , 0);
+        tableEj3.setValueAt(ejercicio3.nEmple.get(ejercicio3.nEmple.size()-1), x+1, 1);
+        tableEj3.setValueAt(ejercicio3.Salario.get(ejercicio3.Salario.size()-1), x+1, 2);
+        x++;
+
+        txtbNomina.setText(String.valueOf(ejercicio3.nomina));
+
+        txtbNombre4.setText("");
+        txtbNumEmp.setText("");
+            txtbSalario.setText("");
+        
     }//GEN-LAST:event_btnAgregar3ActionPerformed
 
     private void btnEliminar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar4ActionPerformed
@@ -474,8 +475,10 @@ public class Laboratorio5 extends javax.swing.JPanel {
         String cadena = txtbPila.getText();
         if(cadena.isEmpty())
         {
+            JOptionPane.showMessageDialog(null, "El campo de texto  no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
+        
         pila.add(cadena);
         DefaultTableModel model = (DefaultTableModel) tableEj4.getModel();
         model.setColumnCount(1);
@@ -492,6 +495,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
         
         if(alumno.isEmpty() || carrera.isEmpty() || carnet.isEmpty())
         {
+            JOptionPane.showMessageDialog(null, "Uno o varios campos vacios", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
         
@@ -510,7 +514,14 @@ public class Laboratorio5 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregar1ActionPerformed
 
     private void btnAgregar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar5ActionPerformed
-        int num = Integer.parseInt(txtbNumero2.getText());
+        String numero = txtbNumero2.getText();
+        if(numero.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        int num = Integer.parseInt(numero);
         ejercicio5.lisNum.add(num);
 
         DefaultTableModel model = (DefaultTableModel) tableEj5.getModel();
