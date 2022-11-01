@@ -7,14 +7,16 @@ public class Arbol {
 
     private Nodo raiz;
     int alt;
+    int lado;
 
     public Arbol() {
         raiz = null;
     }
     
-    public boolean agregar(String dato) {
+    public boolean agregar(String dato, int lado) {
         Nodo nuevo = new Nodo(dato, null, null);
-        insertar(nuevo, raiz, 0);
+        insertar(nuevo, raiz, lado);
+        this.lado = lado;
         return true;
     }
     
@@ -28,17 +30,18 @@ public class Arbol {
             }
             else{
                 if(nuevo.getDato() != pivote.getDato()){
-                    if(pivote.getIzq() == null){
+                    if(pivote.getIzq() == null && lado == 1){
                         pivote.setIzq(nuevo);
                     }
-                    else{
+                    else if(pivote.getIzq() != null && lado == 1){
                         insertar(nuevo, pivote.getIzq(), 1);
                     }
                 }
                 else{
-                    if (pivote.getDer() == null) {
+                    if (pivote.getDer() == null && lado == 2) {
                     pivote.setDer(nuevo);
-                    } else {
+                    }
+                    else if(pivote.getDer() != null && lado == 2){
                         insertar(nuevo, pivote.getDer(), 1);
                     }
                 }
@@ -107,10 +110,10 @@ public class Arbol {
             if (dato == aux.getDato()){
                 return true;
             }
-            else if(lado == 1){
+            else if(this.lado == 1){
                 aux = aux.getDer();
             }
-            else if(lado == 2){
+            else if(this.lado == 2){
                 aux = aux.getIzq();
             }
         }

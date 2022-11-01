@@ -25,6 +25,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
     Nodo der;
     Nodo nodoarbol = new Nodo(dato, izq, der);
     int lado;
+    String txtizq = "¿Tiene un hijo a la izquierda?";
+    String txtder = "¿Tiene un hijo en la derecha?";
     
     public Laboratorio6() {
         initComponents();
@@ -137,22 +139,36 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         String texto = txtbNodo.getText();
         //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
-        if(texto.isEmpty() == false){
+        if(texto.isEmpty() == false && txtLado.getText().equalsIgnoreCase(txtizq)){
             nodoarbol.dato = txtbNodo.getText();
             txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
             
             lado = 1;
-            if (this.simulador.insertar(texto)) {
+            if (this.simulador.insertar(texto, lado)) {
                 complementos();
             }
             
             vueltas = vueltas - 1;
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
-            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
+            txtLado.setText(txtizq);
+        }
+        if(texto.isEmpty() == false && txtLado.getText().equalsIgnoreCase(txtder)){
+            nodoarbol.dato = txtbNodo.getText();
+            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
+            
+            lado = 2;
+            if (this.simulador.insertar(texto, lado)) {
+                complementos();
+            }
+            
+            vueltas = vueltas - 1;
+            txtbNodo.setText("");
+            txtNodo.setForeground(Color.black);
+            txtLado.setText(txtizq);
         }
         else if(texto.isEmpty() == true){
-            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
+            txtLado.setText(txtizq);
             txtNodo.setForeground(Color.red);
         }
     }//GEN-LAST:event_btnSiMouseClicked

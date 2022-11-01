@@ -16,8 +16,8 @@ public class SimuladorArbolBinario {
     public SimuladorArbolBinario() {
     }
 
-    public boolean insertar(String dato) {
-        return (this.miArbol.agregar(dato));
+    public boolean insertar(String dato, int lado) {
+        return (this.miArbol.agregar(dato, lado));
     }
     //metodo para mostrar los recorridos del arbol
     public String preOrden() {
