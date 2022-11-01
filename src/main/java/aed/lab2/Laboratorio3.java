@@ -5,7 +5,7 @@
 package aed.lab2;
 
 import javax.swing.table.DefaultTableModel;
-import java.util.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,14 +14,9 @@ import java.util.*;
 public class Laboratorio3 extends javax.swing.JPanel {
 
     //Variables a usar
-    int tam, cuenta, ene = -1, pos;
+    int tam, cuenta;
     int arregloA[] = new int[100];
-    int arregloB[] = new int[100];
-    String arregloE[] = new String[100];
-    String arregloE2[] = new String[100];
-    String arregloS[] = new String[100], arregloC = "";
-    int aux;
-    boolean existe = false;
+    String arregloC = "";
     
     public Laboratorio3() {
         initComponents();
@@ -97,19 +92,16 @@ public class Laboratorio3 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         panelEjercicio1.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio1.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio1.setToolTipText("");
         panelEjercicio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio1.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio1.setText("Ejercicio 1");
         panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj1.setForeground(new java.awt.Color(0, 0, 0));
-        txtTamEj1.setText("Ingrese la cantidad de números:");
+        txtTamEj1.setText("Ingrese el tamaño del arreglo:");
         panelEjercicio1.add(txtTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         txtbTamEj1.setBackground(new java.awt.Color(102, 102, 102));
@@ -131,8 +123,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj1.setForeground(new java.awt.Color(0, 0, 0));
-        txtArregloEj1.setText("Ingrese el número en la posición: 1");
+        txtArregloEj1.setText("Añadir numero: 1");
         panelEjercicio1.add(txtArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         txtbArregloEj1.setBackground(new java.awt.Color(102, 102, 102));
@@ -156,7 +147,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj1.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio1.add(txtArregloCeldaEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj1.setBackground(new java.awt.Color(102, 102, 102));
@@ -177,18 +167,15 @@ public class Laboratorio3 extends javax.swing.JPanel {
         tpanelLaboratorio3.addTab("Ejercicio 1", panelEjercicio1);
 
         panelEjercicio2.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio2.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio2.setToolTipText("");
         panelEjercicio2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio2.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio2.setText("Ejercicio 2");
         panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtArregloEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj2.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setText("Ingrese el arreglo:");
         panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
@@ -211,7 +198,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj2.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio2.add(txtArregloCeldaEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj2.setBackground(new java.awt.Color(102, 102, 102));
@@ -232,18 +218,15 @@ public class Laboratorio3 extends javax.swing.JPanel {
         tpanelLaboratorio3.addTab("Ejercicio 2", panelEjercicio2);
 
         panelEjercicio3.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio3.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio3.setToolTipText("");
         panelEjercicio3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio3.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio3.setText("Ejercicio 3");
         panelEjercicio3.add(txtEjercicio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         txtTamEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj3.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj3.setText("Ingrese el tamaño del arreglo:");
         panelEjercicio3.add(txtTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
@@ -266,7 +249,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj3.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setText("Ingrese el número en la posición: 1");
         panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
@@ -291,24 +273,20 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj3.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio3.add(txtArregloCeldaEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tpanelLaboratorio3.addTab("Ejercicio 3", panelEjercicio3);
 
         panelEjercicio4.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio4.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio4.setToolTipText("");
         panelEjercicio4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio4.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio4.setText("Ejercicio 4");
         panelEjercicio4.add(txtEjercicio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         txtResEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtResEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtResEj4.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio4.add(txtResEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         txtbResEj4.setBackground(new java.awt.Color(102, 102, 102));
@@ -332,7 +310,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj4.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj4.setText("Ingrese una frase de su preferencia:");
         panelEjercicio4.add(txtArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
@@ -355,18 +332,15 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj4.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio4.add(txtArregloCeldaEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tpanelLaboratorio3.addTab("Ejercicio 4", panelEjercicio4);
 
         panelEjercicio5.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio5.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio5.setToolTipText("");
         panelEjercicio5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio5.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio5.setText("Ejercicio 5");
         panelEjercicio5.add(txtEjercicio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
@@ -383,7 +357,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj5.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio5.add(txtArregloCeldaEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj5.setBackground(new java.awt.Color(102, 102, 102));
@@ -403,49 +376,41 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtExpEj51.setBackground(new java.awt.Color(0, 0, 0));
         txtExpEj51.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtExpEj51.setForeground(new java.awt.Color(0, 0, 0));
         txtExpEj51.setText("Cuando pulse \"Aceptar\" podrá los años");
         panelEjercicio5.add(txtExpEj51, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         txtExpEj352.setBackground(new java.awt.Color(0, 0, 0));
         txtExpEj352.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtExpEj352.setForeground(new java.awt.Color(0, 0, 0));
         txtExpEj352.setText("que tardará la cuenta de Pedro de 400$");
         panelEjercicio5.add(txtExpEj352, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         txtExpEj353.setBackground(new java.awt.Color(0, 0, 0));
         txtExpEj353.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtExpEj353.setForeground(new java.awt.Color(0, 0, 0));
         txtExpEj353.setText("en superar a la de Juan de 500$ si la tasa");
         panelEjercicio5.add(txtExpEj353, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         txtExpEj54.setBackground(new java.awt.Color(0, 0, 0));
         txtExpEj54.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtExpEj54.setForeground(new java.awt.Color(0, 0, 0));
         txtExpEj54.setText("de interés es de un 4% y ambos abrieron");
         panelEjercicio5.add(txtExpEj54, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         txtExpEj55.setBackground(new java.awt.Color(0, 0, 0));
         txtExpEj55.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtExpEj55.setForeground(new java.awt.Color(0, 0, 0));
         txtExpEj55.setText("sus cuentas en el año 2021.");
         panelEjercicio5.add(txtExpEj55, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         tpanelLaboratorio3.addTab("Ejercicio 5", panelEjercicio5);
 
         panelEjercicio6.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio6.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio6.setToolTipText("");
         panelEjercicio6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio6.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio6.setText("Ejercicio 6");
         panelEjercicio6.add(txtEjercicio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
         txtTamEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj6.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj6.setText("Dé un número positivo mayor que 1:");
         panelEjercicio6.add(txtTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
@@ -468,7 +433,6 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloCeldaEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj6.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio6.add(txtArregloCeldaEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj6.setBackground(new java.awt.Color(102, 102, 102));
@@ -509,26 +473,34 @@ public class Laboratorio3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 1">
     //Ejercicio 1
     private void btnTamEj1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj1MouseClicked
-        tam = Integer.parseInt(txtbTamEj1.getText());
+        String a = txtbTamEj1.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "El texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return ;
+        }
+        tam = Integer.parseInt(a);
         txtbArregloEj1.setEnabled(true);
         btnArregloEj1.setEnabled(true);
         cuenta = 0; //Resetea el contador para que se pueda agregar de nuevo el arreglo
+        txtArregloEj1.setText("Añadir numero: " + (cuenta+1));
     }//GEN-LAST:event_btnTamEj1MouseClicked
 
     private void btnArregloEj1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj1MouseClicked
         int i = 0, n = tam;
 
-        if(cuenta < tam){
+        if(cuenta != tam){
+            String a = txtbArregloEj1.getText();
+            if(a.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this, "El texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+                return ;
+            }
             arregloA[cuenta] = Integer.parseInt(txtbArregloEj1.getText());
             txtbArregloEj1.setText("");
             cuenta = cuenta + 1;
-            txtArregloEj1.setText("Ingrese el número en la posición: " + (cuenta+1));
-        }
-        else if(cuenta >= tam){
-            txtArregloEj1.setText("Tamaño máximo del arreglo alcanzado.");
-            txtbArregloEj1.setText("");
-
-            //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
+            txtArregloEj1.setText("Añadir numero: " + (cuenta+1));
+            
             DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
             model.setColumnCount(0);
             model.addColumn("Original");
@@ -542,6 +514,10 @@ public class Laboratorio3 extends javax.swing.JPanel {
             n = tam;
 
             inverso(arregloA, i, n, j);
+             txtbTamEj1.setText("");
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Tamaño máximo del arreglo alcanzado", "Advertencia", JOptionPane.WARNING_MESSAGE);  
         }
     }//GEN-LAST:event_btnArregloEj1MouseClicked
     //</editor-fold>
