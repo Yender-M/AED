@@ -20,11 +20,12 @@ public class Laboratorio6 extends javax.swing.JPanel {
      */
     
     int vueltas = 0;
-    Object dato;
-    Nodo izq;
-    Nodo der;
-    Nodo nodoarbol = new Nodo(dato, izq, der);
-    int lado;
+    Object nom = "A";
+    Nodo i;
+    Nodo d;
+    Nodo nodoarbol = new Nodo(nom, i, d);
+    int h = 0;
+    int x = 280, y = 10;
     String txtizq = "¿Tiene un hijo a la izquierda?";
     String txtder = "¿Tiene un hijo en la derecha?";
     
@@ -139,45 +140,48 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
         String texto = txtbNodo.getText();
         //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
-        if(texto.isEmpty() == false && txtLado.getText().equalsIgnoreCase(txtizq)){
-            nodoarbol.dato = txtbNodo.getText();
+        if(texto.isEmpty() == false){
+            nodoarbol.setDato(texto);
             txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
+            txtLado.setText("¿Tiene hijo a la izquierda?");
             
-            lado = 1;
-            if (this.simulador.insertar(texto, lado)) {
-                complementos();
+            if(txtLado.getText().equalsIgnoreCase(txtizq)){
+                btnsi(1, texto, nodoarbol);
+            }
+            else if(txtLado.getText().equalsIgnoreCase(txtder)){
+                btnsi(2, texto, nodoarbol);
             }
             
+            //Se resta la vuelta para que se acumule el número
             vueltas = vueltas - 1;
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
             txtLado.setText(txtizq);
         }
-        if(texto.isEmpty() == false && txtLado.getText().equalsIgnoreCase(txtder)){
-            nodoarbol.dato = txtbNodo.getText();
-            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
-            
-            lado = 2;
-            if (this.simulador.insertar(texto, lado)) {
-                complementos();
-            }
-            
-            vueltas = vueltas - 1;
-            txtbNodo.setText("");
-            txtNodo.setForeground(Color.black);
-            txtLado.setText(txtizq);
-        }
+        /*if (this.simulador.insertar(texto, lado)) {
+            complementos();
+        }*/
         else if(texto.isEmpty() == true){
-            txtLado.setText(txtizq);
+            //txtLado.setText(txtizq);
             txtNodo.setForeground(Color.red);
         }
     }//GEN-LAST:event_btnSiMouseClicked
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
-        if(vueltas <= 1){
+        if(h == 0){
+            //Falta dehabilitar los demás componentes activos
+            vuelta2();
+        }
+        else if(vueltas <= 1){
             vueltas = vueltas + 1;
             txtNodo.setForeground(Color.black);
-            txtLado.setText("¿Tiene un hijo a la derecha?");
+            txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
+            if(txtLado.getText().equalsIgnoreCase(txtizq)){
+                txtLado.setText("¿Tiene un hijo a la derecha?");
+            }
+            else if(txtLado.getText().equalsIgnoreCase(txtder)){
+                h = h - 1;
+            }
         }
         else{
             vuelta2();
@@ -188,7 +192,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
         if(vueltas == 0){
             txtLado.setText("¿Tiene un hijo a la izquierda?");
-
+            txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
+            
             btnSi.setOpaque(true);
             btnSi.setContentAreaFilled(true);
             btnSi.setBorderPainted(true);
@@ -205,6 +210,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
             txtNodo.setForeground(Color.black);
             btnAceptar.setEnabled(false);
 
+            h = 1;
+            x = 280; y = 10;
             vueltas = 1;
             //Pasarle alguna variable al método de la clase CrearArbol
         }
@@ -213,8 +220,28 @@ public class Laboratorio6 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnAceptarMouseClicked
 
-    public void complementos(){
-        this.repintarArbol();
+    private void btnsi(int lado, String dato, Nodo nd){
+        if(h == 0){
+            //Falta dehabilitar los demás componentes activos
+            vuelta2();
+        }
+        else if(lado == 1 && h > 0){ //Si agrega a la izquierda
+            nd.setIzq(nd);
+            h = h + 1;
+            x = x - 30; y = y + 30;
+            repintarArbol();
+        }
+        else if(lado == 2 && h > 0){ //Si agrega a la derecha
+            if(nd.getDer() == null){ //Si el nodo a agregar no existía
+                nd.setDer(nd);
+                h = h + 1;
+                x = x + 30; y = y + 30;
+                repintarArbol();
+            }
+            else{ //Si había algún nodo
+                h = h - 1;
+            }
+        }
     }
     
     private void repintarArbol() {

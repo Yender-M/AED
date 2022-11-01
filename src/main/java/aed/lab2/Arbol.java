@@ -29,25 +29,14 @@ public class Arbol {
                 raiz = nuevo;
             }
             else{
-                if(nuevo.getDato() != pivote.getDato()){
-                    if(pivote.getIzq() == null && lado == 1){
-                        pivote.setIzq(nuevo);
-                    }
-                    else if(pivote.getIzq() != null && lado == 1){
-                        insertar(nuevo, pivote.getIzq(), 1);
-                    }
+                if(lado == 1){
+                    
                 }
-                else{
-                    if (pivote.getDer() == null && lado == 2) {
-                    pivote.setDer(nuevo);
-                    }
-                    else if(pivote.getDer() != null && lado == 2){
-                        insertar(nuevo, pivote.getDer(), 1);
-                    }
+                else if(lado == 2){
+                    
                 }
             }
         }
-
     }
 
     public Nodo getRaiz() {
