@@ -12,7 +12,7 @@ import javax.swing.*;
  */
 public class CrearArbol {
     public void CrearArbol(Nodo apnodo){
-        //Leer Apnodo.info (lee la info y se guarda en el nodo)
+        //Leer Apnodo.dato (lee la info y se guarda en el nodo)
         
         //Escribir "¿Existe nodo por la izquierda? 1.Sí. 2.No."
         //Leer Resp

@@ -4,6 +4,8 @@
  */
 package aed.lab2;
 
+import java.awt.Color;
+
 /**
  *
  * @author pavel
@@ -16,8 +18,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
     
     int vueltas = 0;
     Object dato;
-    Nodo izq, der;
-    NodosArbol nodoarbol = new NodosArbol(dato, izq, der);
+    Nodo izq;
+    Nodo der;
+    Nodo nodoarbol = new Nodo(dato, izq, der);
     
     public Laboratorio6() {
         initComponents();
@@ -39,6 +42,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnSi = new javax.swing.JButton();
         btnNo = new javax.swing.JButton();
         btnAceptar = new javax.swing.JButton();
+        txtNodoActual = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
@@ -61,7 +65,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
 
         txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtNodo.setForeground(new java.awt.Color(0, 0, 0));
         txtNodo.setText("Nombre del nodo:");
         add(txtNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
@@ -72,7 +75,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         add(txtbNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
 
         txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtLado.setForeground(new java.awt.Color(0, 0, 0));
         add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         btnSi.setBackground(new java.awt.Color(153, 102, 255));
@@ -108,28 +110,34 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
         });
         add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, 30));
+
+        txtNodoActual.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtNodoActual.setText("Nodo actual:");
+        add(txtNodoActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        if(vueltas == 1){
-            vueltas = vueltas + 1;
+        String texto = txtbNodo.getText();
+        //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
+        if(texto.isEmpty() == false){
+            nodoarbol.dato = txtbNodo.getText();
+            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
             
-            txtNodo.setText("Nombre del hijo:");
-            txtbNodo.setEnabled(true);
-            btnAceptar.setEnabled(true);
-            
-            txtLado.setText("¿Tiene un hijo a la derecha?");
+            vueltas = vueltas - 1;
+            txtbNodo.setText("");
+            txtNodo.setForeground(Color.black);
+            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
         }
-        else{
-            vuelta2();
-            vueltas = vueltas + 1;
+        else if(texto.isEmpty() == true){
+            txtLado.setText("¿Tiene "+ /*nodo.dato*/ "un hijo a la izquierda?");
+            txtNodo.setForeground(Color.red);
         }
     }//GEN-LAST:event_btnSiMouseClicked
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
-        if(vueltas == 1){
+        if(vueltas <= 1){
             vueltas = vueltas + 1;
-            
+            txtNodo.setForeground(Color.black);
             txtLado.setText("¿Tiene un hijo a la derecha?");
         }
         else{
@@ -153,13 +161,16 @@ public class Laboratorio6 extends javax.swing.JPanel {
         btnNo.setEnabled(true);
         btnNo.setText("No");
         
-        txtbNodo.setEditable(false);
+        txtbNodo.setText("");
+        txtNodo.setForeground(Color.black);
         btnAceptar.setEnabled(false);
         
         vueltas = 1;
         //Pasarle alguna variable al método de la clase CrearArbol
     }//GEN-LAST:event_btnAceptarMouseClicked
 
+    // <editor-fold defaultstate="collapsed" desc="Vuelta2">
+    //Vuelta 2
     private void vuelta2(){
         txtLado.setText("");
         
@@ -177,8 +188,10 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
         txtbNodo.setText("");
         txtbNodo.setEditable(true);
+        txtNodo.setForeground(Color.black);
         btnAceptar.setEnabled(true);
     }
+    //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
@@ -187,6 +200,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private javax.swing.JPanel panelBoard;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
+    private javax.swing.JLabel txtNodoActual;
     private javax.swing.JTextField txtbNodo;
     // End of variables declaration//GEN-END:variables
 }

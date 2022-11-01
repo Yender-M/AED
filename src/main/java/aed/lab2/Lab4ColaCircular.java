@@ -2,8 +2,8 @@
 package aed.lab2;
 
 public class Lab4ColaCircular {
-    private Nodo primero;
-    private Nodo ultimo;
+    private NodoLab4 primero;
+    private NodoLab4 ultimo;
     
     public Lab4ColaCircular(){
         primero = null;
@@ -15,8 +15,8 @@ public class Lab4ColaCircular {
     }
     
     public void insertar(Object dato){
-        Nodo nuevoNodo;
-        nuevoNodo = new Nodo(dato);
+        NodoLab4 nuevoNodo;
+        nuevoNodo = new NodoLab4(dato);
         nuevoNodo.siguiente = nuevoNodo;
         
         if(colaVacia()){
@@ -51,7 +51,7 @@ public class Lab4ColaCircular {
     }
     
     public String toString(){
-        Nodo aux;
+        NodoLab4 aux;
         aux = primero;
         String cad = "";
         
