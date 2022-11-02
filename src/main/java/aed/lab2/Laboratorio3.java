@@ -60,6 +60,8 @@ public class Laboratorio3 extends javax.swing.JPanel {
         txtbArregloEj3 = new javax.swing.JTextField();
         btnArregloEj3 = new javax.swing.JButton();
         txtArregloCeldaEj3 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tableLab3_Eje3 = new javax.swing.JTable();
         panelEjercicio4 = new javax.swing.JPanel();
         txtEjercicio4 = new javax.swing.JLabel();
         txtResEj4 = new javax.swing.JLabel();
@@ -172,18 +174,18 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtEjercicio2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEjercicio2.setText("Ejercicio 2");
-        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
         txtArregloEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj2.setText("Ingrese el arreglo:");
-        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        txtArregloEj2.setText("Ingrese la cadena:");
+        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
         txtbArregloEj2.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 190, -1));
+        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 250, -1));
 
         btnArregloEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,7 +196,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
                 btnArregloEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 80, 30));
+        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 80, 30));
 
         txtArregloCeldaEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -213,7 +215,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tableEj2);
 
-        panelEjercicio2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 500, 170));
+        panelEjercicio2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 500, 110));
 
         tpanelLaboratorio3.addTab("Ejercicio 2", panelEjercicio2);
 
@@ -249,15 +251,15 @@ public class Laboratorio3 extends javax.swing.JPanel {
 
         txtArregloEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj3.setText("Ingrese el número en la posición: 1");
-        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        txtArregloEj3.setText("Añadir numero: 1");
+        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
 
         txtbArregloEj3.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj3.setEnabled(false);
-        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 220, -1));
+        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 220, -1));
 
         btnArregloEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -269,11 +271,27 @@ public class Laboratorio3 extends javax.swing.JPanel {
                 btnArregloEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 80, 30));
+        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 80, 30));
 
         txtArregloCeldaEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         panelEjercicio3.add(txtArregloCeldaEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+
+        tableLab3_Eje3.setBackground(new java.awt.Color(102, 102, 102));
+        tableLab3_Eje3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        tableLab3_Eje3.setForeground(new java.awt.Color(255, 255, 255));
+        tableLab3_Eje3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        tableLab3_Eje3.setRowHeight(30);
+        jScrollPane7.setViewportView(tableLab3_Eje3);
+
+        panelEjercicio3.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 470, 50));
 
         tpanelLaboratorio3.addTab("Ejercicio 3", panelEjercicio3);
 
@@ -525,53 +543,74 @@ public class Laboratorio3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 2">
     //Ejercicio 2
     private void btnArregloEj2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj2MouseClicked
-        if(!("".equals(txtbArregloEj2.getText()))){
-            arregloC = txtbArregloEj2.getText();
-            txtbArregloEj2.setText("");
-
-            //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
-            DefaultTableModel model = (DefaultTableModel) tableEj2.getModel();
-            model.setColumnCount(0);
-            model.addColumn("Original");
-            model.addColumn("Inverso");
-            model.setRowCount(1);
-
-            tableEj2.setValueAt(arregloC, 0, 0);
-            tableEj2.setValueAt(palabra(arregloC, arregloC.length()-1), 0, 1);
-
-            arregloC = "";
+        String a = txtbArregloEj2.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "El texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return ;
         }
-        else if("".equals(txtbArregloEj2.getText())){
-            txtArregloEj2.setText("Arreglo vacío.");
-        }
-        else{
-            txtArregloEj2.setText("Error inesperado.");
-        }
+        arregloC = txtbArregloEj2.getText();
+        txtbArregloEj2.setText("");
+
+        //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
+        DefaultTableModel model = (DefaultTableModel) tableEj2.getModel();
+        model.setColumnCount(0);
+        model.addColumn("Original");
+        model.addColumn("Inverso");
+        model.setRowCount(1);
+
+        tableEj2.setValueAt(arregloC, 0, 0);
+        tableEj2.setValueAt(palabra(arregloC, arregloC.length()-1), 0, 1);
+
+        arregloC = "";
     }//GEN-LAST:event_btnArregloEj2MouseClicked
     //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 3">
     //Ejercicio 3
     private void btnTamEj3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj3MouseClicked
+        String a = txtbTamEj3.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "El texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return ;
+        }
+        tam = Integer.parseInt(a);
         txtbArregloEj3.setEnabled(true);
         btnArregloEj3.setEnabled(true);
         btnTamEj3.setEnabled(false);
         txtbTamEj3.setEnabled(false);
+        cuenta = 0;
+        txtArregloEj3.setText("Añadir numero: " + (cuenta+1));
     }//GEN-LAST:event_btnTamEj3MouseClicked
 
     private void btnArregloEj3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj3MouseClicked
         int i = 0, pro = 1;
-
-        if(cuenta < tam){
+        
+        if(cuenta != tam){
+            String a = txtbArregloEj3.getText();
+            if(a.isEmpty())
+            {
+                JOptionPane.showMessageDialog(this, "El texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+                return ;
+            }
             arregloA[cuenta] = Integer.parseInt(txtbArregloEj3.getText());
             txtbArregloEj3.setText("");
+            
+            DefaultTableModel model = (DefaultTableModel) tableLab3_Eje3.getModel();
+            model.setColumnCount(1);
+            model.setRowCount(1);
+            tableLab3_Eje3.setValueAt("Elementos: "+arregloA[cuenta], 0 , 0);
+            
             cuenta = cuenta + 1;
-            txtArregloEj3.setText("Ingrese el número en la posición: " + (cuenta+1));
+            txtArregloEj3.setText("Añadir numero: " + (cuenta+1));
+            
+            
         }
-        else if(cuenta >= tam){
-            txtArregloEj3.setText("Tamaño máximo del arreglo alcanzado.");
+        else{
+            JOptionPane.showMessageDialog(this, "Tamaño máximo del arreglo alcanzado", "Advertencia", JOptionPane.WARNING_MESSAGE);
             txtbArregloEj3.setText("");
-
+            
             txtbArregloEj3.setText("Producto del arreglo es: " + producto(arregloA, i, pro, tam));
 
             btnArregloEj3.setEnabled(false);
@@ -692,8 +731,8 @@ public class Laboratorio3 extends javax.swing.JPanel {
     
     public int producto(int num[], int x, int pro, int tam){
     	if(x < tam){
-    		pro *= num[x];
-    		return producto(num, x+1, pro,tam);
+            pro *= num[x];
+            return producto(num, x+1, pro,tam);
     	}
     	return pro;
     }
@@ -778,6 +817,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JPanel panelEjercicio1;
     private javax.swing.JPanel panelEjercicio2;
     private javax.swing.JPanel panelEjercicio3;
@@ -788,6 +828,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
     private javax.swing.JTable tableEj2;
     private javax.swing.JTable tableEj5;
     private javax.swing.JTable tableEj6;
+    private javax.swing.JTable tableLab3_Eje3;
     private javax.swing.JTabbedPane tpanelLaboratorio3;
     private javax.swing.JLabel txtArregloCeldaEj1;
     private javax.swing.JLabel txtArregloCeldaEj2;
