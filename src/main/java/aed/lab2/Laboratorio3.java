@@ -624,6 +624,7 @@ public class Laboratorio3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 4">
     //Ejercicio 4
     private void btnResEj4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResEj4MouseClicked
+        btnArregloEj4.setEnabled(true);
         txtbResEj4.setEnabled(false);
         btnResEj4.setEnabled(false);
         txtbResEj4.setText("");
@@ -632,26 +633,28 @@ public class Laboratorio3 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnResEj4MouseClicked
 
     private void btnArregloEj4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj4MouseClicked
-        String pala = null;
+        String pala = null, a;
         int i = 0, cont = 0, result = 0;
-
-        if(!("".equals(txtbArregloEj4.getText()))){
-            txtArregloEj4.setText("Ingrese una frase de su preferencia:");
-            arregloC = txtbArregloEj4.getText();
-
-            btnResEj4.setEnabled(true);
-            txtbResEj4.setEnabled(true);
-
-            result = espacios(arregloC, arregloC.length(), i, cont, pala);
-
-            arregloC = "";
-
-            txtResEj4.setText("Precione 'Aceptar' para intentar otra vez.");
-            txtbResEj4.setText("El texto contiene "+ result +" espacios en total.");
+        
+        a = txtbArregloEj4.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-        else if("".equals(txtbArregloEj4.getText())){
-            txtArregloEj4.setText("Caja de texto vacía, intente de nuevo:");
-        }
+        txtArregloEj4.setText("Ingrese una frase de su preferencia:");
+        arregloC = txtbArregloEj4.getText();
+
+        btnResEj4.setEnabled(true);
+        txtbResEj4.setEnabled(true);
+        btnArregloEj4.setEnabled(false);
+
+        result = espacios(arregloC, arregloC.length(), i, cont, pala);
+
+        arregloC = "";
+
+        txtResEj4.setText("Precione 'Aceptar' para intentar otra vez.");
+        txtbResEj4.setText("El texto contiene "+ result +" espacios en total.");
     }//GEN-LAST:event_btnArregloEj4MouseClicked
     //</editor-fold>
     
@@ -676,10 +679,17 @@ public class Laboratorio3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 6">
     //Ejercicio 6
     private void btnTamEj6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj6MouseClicked
-        int z = Integer.parseInt(txtbTamEj6.getText());
+        String a = txtbTamEj6.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        int z = Integer.parseInt(a);
 
         if(z < 1 || z == 1){
-            txtTamEj6.setText("Número menor o igual a 1, intente de nuevo:");
+            JOptionPane.showMessageDialog(null, "El numero tiene que ser mayor que uno", "Advertencia", JOptionPane.WARNING_MESSAGE);
         }
         else if(z > 1){
             int x = 0, y;
