@@ -1,8 +1,11 @@
 package aed.lab2;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import javax.swing.*;
 
 public class Laboratorio6 extends javax.swing.JPanel {
 
@@ -16,22 +19,15 @@ public class Laboratorio6 extends javax.swing.JPanel {
     Nodo d;
     Nodo nodoarbol = new Nodo(nom, i, d);
     int h = 0;
-    int x = 280, y = 90;
+    int x = 280, y = 10;
     String txtizq = "¿Tiene un hijo a la izquierda?";
-    String txtder = "¿Tiene un hijo en la derecha?";
+    String txtder = "¿Tiene un hijo a la derecha?";
     
     public Laboratorio6() {
         initComponents();
     }
-      
-    public void paint(Graphics g){
-        super.paint(g);
-        Graphics2D g2d = (Graphics2D) g;
-        dibujarArbol(g2d, nodoarbol, x, y);
-    }
     
     private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -124,24 +120,18 @@ public class Laboratorio6 extends javax.swing.JPanel {
         if(texto.isEmpty() == false){
             nodoarbol.setDato(texto);
             txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
-            txtLado.setText("¿Tiene hijo a la izquierda?");
             
-            if(txtLado.getText().equalsIgnoreCase(txtizq)){
+            //repintarArbol();
+            if(txtizq.equalsIgnoreCase(txtLado.getText())){
                 btnsi(1, texto, nodoarbol);
             }
-            else if(txtLado.getText().equalsIgnoreCase(txtder)){
+            else if(txtder.equalsIgnoreCase(txtLado.getText())){
                 btnsi(2, texto, nodoarbol);
             }
             
-            //Se resta la vuelta para que se acumule el número
-            vueltas = vueltas - 1;
-            txtbNodo.setText("");
-            txtNodo.setForeground(Color.black);
             txtLado.setText(txtizq);
+            
         }
-        /*if (this.simulador.insertar(texto, lado)) {
-            complementos();
-        }*/
         else if(texto.isEmpty() == true){
             //txtLado.setText(txtizq);
             txtNodo.setForeground(Color.red);
@@ -158,7 +148,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             txtNodo.setForeground(Color.black);
             txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
             if(txtLado.getText().equalsIgnoreCase(txtizq)){
-                txtLado.setText("¿Tiene un hijo a la derecha?");
+                txtLado.setText(txtder);
             }
             else if(txtLado.getText().equalsIgnoreCase(txtder)){
                 h = h - 1;
@@ -181,9 +171,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
         if(vueltas == 0){
             nodoarbol.setDato(texto);
             txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
-            
-            txtLado.setText("¿Tiene un hijo a la izquierda?");
-            txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
+            txtLado.setEnabled(true);
+            txtLado.setText(txtizq);
             
             btnSi.setOpaque(true);
             btnSi.setContentAreaFilled(true);
@@ -202,8 +191,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
             btnAceptar.setEnabled(false);
             
             h = 1;
-            x = 280; y = 80;
+            x = 280; y = 10;
             vueltas = 1;
+            Lab6Graficar.Nodo(panelBoard.getGraphics(), texto, x, y, x, y - 15);
             //Pasarle alguna variable al método de la clase CrearArbol
         }
         else if(vueltas > 2){
@@ -212,25 +202,43 @@ public class Laboratorio6 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAceptarMouseClicked
 
     private void btnsi(int lado, String nomn, Nodo nd){
+        //Guardan la posición anterior del círculo para dibujar las líneas
+        int x1 = x; int y1 = y;
+        
         if(h == 0){
             txtbNodo.setEnabled(false);
             btnAceptar.setEnabled(false);
             vuelta2();
         }
-        else if(lado == 1 && h > 0){ //Si agrega a la izquierda
+        else if(lado == 1){ //Si agrega a la izquierda
             nd.setIzq(nd);
+            
+            //Da un margen más amplio entre los hijos si la altura es 1
+            if(h == 1){
+                x = x - 70; y = y + 30;
+            }
+            else{
+                x = x - 30; y = y + 30;
+            }
+            
             h = h + 1;
-            x = x - 30; y = y + 30;
-            //paint(x, y);
-            repintarArbol();
+            Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
+            //repintarArbol();
         }
-        else if(lado == 2 && h > 0){ //Si agrega a la derecha
+        else if(lado == 2){ //Si agrega a la derecha
             if(nd.getDer() == null){ //Si el nodo a agregar no existía
                 nd.setDer(nd);
+                
+                if(h == 1){
+                    x = x + 70; y = y + 30;
+                }
+                else{
+                    x = x - 30; y = y + 30;
+                }
+                
                 h = h + 1;
-                x = x + 30; y = y + 30;
-                //paint(x, y);
-                repintarArbol();
+                Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
+                //repintarArbol();
             }
             else{ //Si había algún nodo
                 h = h - 1;
@@ -250,15 +258,16 @@ public class Laboratorio6 extends javax.swing.JPanel {
    }
     
     private void repintarArbol() {
-        this.panelBoard.removeAll();
-        /*Rectangle tamaño = this.panelBoard1.getBounds();
-        this.panelBoard1 = null;
-        this.panelBoard1 = new JPanel();
-        this.panelBoard.add(this.panelBoard1, JLayeredPane.DEFAULT_LAYER);
-        this.panelBoard1.setVisible(true);
-        this.panelBoard1.setBounds(tamaño);
-        this.panelBoard1.setEnabled(false);
-        this.panelBoard1.add(this.simulador.getDibujo(), BorderLayout.CENTER);*/
+        panelBoard.repaint();
+        /*Rectangle tamanyo = panelBoard.getBounds();
+        JPanel panel = new JPanel();
+        panel = panelBoard;
+        panelBoard.removeAll();
+        panelBoard = panel;
+        panelBoard = new JPanel();
+        panelBoard.setBounds(tamanyo);
+        panelBoard.add(panel);
+        panelBoard.setVisible(true);*/
     }
     
     // <editor-fold defaultstate="collapsed" desc="Vuelta2">

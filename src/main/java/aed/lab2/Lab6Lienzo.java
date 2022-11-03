@@ -4,10 +4,20 @@
  */
 package aed.lab2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pavel
  */
-public class Graficar {
+public class Lab6Lienzo {
+    ArrayList<Lab6Graficar> listaNodos = null;
     
+    public Lab6Lienzo(){
+        setListaNodos(new ArrayList<>());
+    }
+    
+    private void setListaNodos(ArrayList a){
+        
+    }
 }
