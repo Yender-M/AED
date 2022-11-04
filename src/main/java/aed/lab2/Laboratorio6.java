@@ -130,7 +130,8 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
             
             txtLado.setText(txtizq);
-            
+            txtbNodo.setText("");
+            txtNodo.setForeground(Color.black);
         }
         else if(texto.isEmpty() == true){
             //txtLado.setText(txtizq);
@@ -147,15 +148,15 @@ public class Laboratorio6 extends javax.swing.JPanel {
             vueltas = vueltas + 1;
             txtNodo.setForeground(Color.black);
             txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
-            if(txtLado.getText().equalsIgnoreCase(txtizq)){
+            if(txtizq.equalsIgnoreCase(txtLado.getText())){
                 txtLado.setText(txtder);
             }
-            else if(txtLado.getText().equalsIgnoreCase(txtder)){
+            else if(txtder.equalsIgnoreCase(txtLado.getText())){
                 h = h - 1;
-                if(nodoarbol.getDer() != null){
+                if(nodoarbol.der != null){
                     x = x - 30; y = y - 30;
                 }
-                else if(nodoarbol.getDer() == null && nodoarbol.getIzq() != null){
+                else if(nodoarbol.der == null && nodoarbol.getIzq() != null){
                     x = x + 30; y = y - 30;
                 }
             }
@@ -240,7 +241,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
                 Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
                 //repintarArbol();
             }
-            else{ //Si había algún nodo
+            else if(nd.getDer() != null){ //Si había algún nodo
                 h = h - 1;
                 if(h == 0){
                 txtbNodo.setEnabled(false);
