@@ -124,7 +124,7 @@ public class Laboratorio4 extends javax.swing.JPanel {
 
         txtAgregarCola.setBackground(new java.awt.Color(0, 0, 0));
         txtAgregarCola.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtAgregarCola.setText("Ingrese la siguiente:");
+        txtAgregarCola.setText("Ingrese un valor:");
         panelColas.add(txtAgregarCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
         txtbCola.setBackground(new java.awt.Color(102, 102, 102));
@@ -184,7 +184,7 @@ public class Laboratorio4 extends javax.swing.JPanel {
 
         txtAgregarPila.setBackground(new java.awt.Color(0, 0, 0));
         txtAgregarPila.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtAgregarPila.setText("Ingrese el centro comercial:");
+        txtAgregarPila.setText("Ingrese un valor:");
         panelPilas.add(txtAgregarPila, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
         txtbPila.setBackground(new java.awt.Color(102, 102, 102));
