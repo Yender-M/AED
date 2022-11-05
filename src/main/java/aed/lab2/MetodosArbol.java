@@ -8,7 +8,7 @@ package aed.lab2;
  *
  * @author pavel
  */
-public class MetodosArbol extends CrearArbol {
+public class MetodosArbol {
     //De alguna forma conectar CrearArbol con MetodosArbol
     
     public void preorden(Nodo nodo){

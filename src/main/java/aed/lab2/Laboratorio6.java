@@ -20,6 +20,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     Nodo nodoarbol = new Nodo(nom, i, d);
     int h = 0;
     int x = 280, y = 10;
+    boolean resp = true;
     String txtizq = "¿Tiene un hijo a la izquierda?";
     String txtder = "¿Tiene un hijo a la derecha?";
     
@@ -27,7 +28,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         initComponents();
     }
     
-    private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
+    private Lab6CrearArbol crear = new Lab6CrearArbol();
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -118,15 +119,14 @@ public class Laboratorio6 extends javax.swing.JPanel {
         String texto = txtbNodo.getText();
         //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
         if(texto.isEmpty() == false){
-            nodoarbol.setDato(texto);
-            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
+            txtNodoActual.setText("Nodo actual: "+ texto);
             
-            //repintarArbol();
+            resp = true;
             if(txtizq.equalsIgnoreCase(txtLado.getText())){
-                btnsi(1, texto, nodoarbol);
+                CrearArbol(nodoarbol);
             }
             else if(txtder.equalsIgnoreCase(txtLado.getText())){
-                btnsi(2, texto, nodoarbol);
+                CrearArbol(nodoarbol);
             }
             
             txtLado.setText(txtizq);
@@ -148,18 +148,17 @@ public class Laboratorio6 extends javax.swing.JPanel {
             vueltas = vueltas + 1;
             txtNodo.setForeground(Color.black);
             txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
+            
             if(txtizq.equalsIgnoreCase(txtLado.getText())){
                 txtLado.setText(txtder);
             }
             else if(txtder.equalsIgnoreCase(txtLado.getText())){
-                h = h - 1;
-                if(nodoarbol.der != null){
-                    x = x - 30; y = y - 30;
-                }
-                else if(nodoarbol.der == null && nodoarbol.getIzq() != null){
-                    x = x + 30; y = y - 30;
-                }
+                
             }
+            
+            h = h - 1;
+            resp = false;
+            CrearArbol(nodoarbol);
         }
         else{
             vuelta2();
@@ -195,13 +194,53 @@ public class Laboratorio6 extends javax.swing.JPanel {
             x = 280; y = 10;
             vueltas = 1;
             Lab6Graficar.Nodo(panelBoard.getGraphics(), texto, x, y, x, y - 15);
+            CrearArbol(nodoarbol);
             //Pasarle alguna variable al método de la clase CrearArbol
         }
         else if(vueltas > 2){
             
         }
     }//GEN-LAST:event_btnAceptarMouseClicked
-
+    
+    private void CrearArbol(Nodo apnodo){
+        apnodo.dato = txtbNodo.getText();
+        
+        String[] opc = {"Sí", "No"};
+        int op = JOptionPane.showOptionDialog(null, txtizq, "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        
+        if(op == 0){
+            String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
+            apnodo.setIzq(new Nodo(texto, null, null));
+            btnsi(1, apnodo.getIzq().dato.toString(), apnodo.getIzq());
+            CrearArbol(apnodo.izq);
+        }
+        else{
+            apnodo.setIzq(null);
+        }
+        
+        op = JOptionPane.showOptionDialog(null, txtder, "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        
+        if(op == 0){
+            if(apnodo.getIzq() == null && h != 1){
+                h = h + 1;
+            }
+            
+            String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
+            apnodo.setDer(new Nodo(texto, null, null));
+            btnsi(2, apnodo.getDer().dato.toString(), apnodo.getDer());
+            CrearArbol(apnodo.der);
+        }
+        else{
+            if(apnodo.getDer() != null){
+                x = x - 30; y = y - 30;
+            }
+            else if(apnodo.getDer() == null && apnodo.getIzq() != null){
+                x = x + 30; y = y - 30;
+            }
+            apnodo.setDer(null);
+        }
+    }
+    
     private void btnsi(int lado, String nomn, Nodo nd){
         //Guardan la posición anterior del círculo para dibujar las líneas
         int x1 = x; int y1 = y;
@@ -212,8 +251,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
             vuelta2();
         }
         else if(lado == 1){ //Si agrega a la izquierda
-            nd.setIzq(nd);
-            
             //Da un margen más amplio entre los hijos si la altura es 1
             if(h == 1){
                 x = x - 70; y = y + 30;
@@ -224,39 +261,29 @@ public class Laboratorio6 extends javax.swing.JPanel {
             
             h = h + 1;
             Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
-            //repintarArbol();
         }
         else if(lado == 2){ //Si agrega a la derecha
             if(nd.getDer() == null){ //Si el nodo a agregar no existía
-                nd.setDer(nd);
-                
                 if(h == 1){
                     x = x + 70; y = y + 30;
                 }
                 else{
-                    x = x - 30; y = y + 30;
+                    x = x + 30; y = y + 30;
                 }
                 
                 h = h + 1;
                 Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
-                //repintarArbol();
             }
             else if(nd.getDer() != null){ //Si había algún nodo
                 h = h - 1;
                 if(h == 0){
-                txtbNodo.setEnabled(false);
-                btnAceptar.setEnabled(false);
-                vuelta2();
+                    txtbNodo.setEnabled(false);
+                    btnAceptar.setEnabled(false);
+                    vuelta2();
                 }
             }
         }
     }
-    
-    private void dibujarArbol(Graphics2D g, Nodo n, int x, int y) 
-    {
-        g.drawString(n.dato.toString(), x + 4, y + 11);
-        g.drawOval(x, y, 15, 15);
-   }
     
     private void repintarArbol() {
         panelBoard.repaint();
