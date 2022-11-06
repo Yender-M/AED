@@ -1,10 +1,6 @@
 package aed.lab2;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import javax.swing.*;
 
 public class Laboratorio6 extends javax.swing.JPanel {
@@ -13,22 +9,13 @@ public class Laboratorio6 extends javax.swing.JPanel {
      * Creates new form Laboratorio6
      */
     
-    int vueltas = 0;
-    Object nom = "A";
-    Nodo i;
-    Nodo d;
-    Nodo nodoarbol = new Nodo(nom, i, d);
-    int h = 0;
+    Nodo nodoarbol = new Nodo("A", null, null);
+    int h = 0; int h_vieja = 0;
     int x = 280, y = 10;
-    boolean resp = true;
-    String txtizq = "¿Tiene un hijo a la izquierda?";
-    String txtder = "¿Tiene un hijo a la derecha?";
     
     public Laboratorio6() {
         initComponents();
     }
-    
-    private Lab6CrearArbol crear = new Lab6CrearArbol();
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -38,10 +25,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         txtNodo = new javax.swing.JLabel();
         txtbNodo = new javax.swing.JTextField();
         txtLado = new javax.swing.JLabel();
-        btnSi = new javax.swing.JButton();
-        btnNo = new javax.swing.JButton();
         btnAceptar = new javax.swing.JButton();
-        txtNodoActual = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
@@ -76,30 +60,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
-        btnSi.setBackground(new java.awt.Color(153, 102, 255));
-        btnSi.setForeground(new java.awt.Color(255, 255, 255));
-        btnSi.setBorderPainted(false);
-        btnSi.setContentAreaFilled(false);
-        btnSi.setEnabled(false);
-        btnSi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnSiMouseClicked(evt);
-            }
-        });
-        add(btnSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 80, 30));
-
-        btnNo.setBackground(new java.awt.Color(153, 102, 255));
-        btnNo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNo.setBorderPainted(false);
-        btnNo.setContentAreaFilled(false);
-        btnNo.setEnabled(false);
-        btnNo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnNoMouseClicked(evt);
-            }
-        });
-        add(btnNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 80, 30));
-
         btnAceptar.setBackground(new java.awt.Color(153, 102, 255));
         btnAceptar.setForeground(new java.awt.Color(255, 255, 255));
         btnAceptar.setText("Aceptar");
@@ -109,148 +69,79 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
         });
         add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, 30));
-
-        txtNodoActual.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtNodoActual.setText("Nodo actual:");
-        add(txtNodoActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        String texto = txtbNodo.getText();
-        //Comprueba que no esté vacía la caja de texto y que sea la primera vuelta
-        if(texto.isEmpty() == false){
-            txtNodoActual.setText("Nodo actual: "+ texto);
-            
-            resp = true;
-            if(txtizq.equalsIgnoreCase(txtLado.getText())){
-                CrearArbol(nodoarbol);
-            }
-            else if(txtder.equalsIgnoreCase(txtLado.getText())){
-                CrearArbol(nodoarbol);
-            }
-            
-            txtLado.setText(txtizq);
-            txtbNodo.setText("");
-            txtNodo.setForeground(Color.black);
-        }
-        else if(texto.isEmpty() == true){
-            //txtLado.setText(txtizq);
-            txtNodo.setForeground(Color.red);
-        }
-    }//GEN-LAST:event_btnSiMouseClicked
-
-    private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
-        if(h == 0){
-            //Falta dehabilitar los demás componentes activos
-            vuelta2();
-        }
-        else if(vueltas <= 1){
-            vueltas = vueltas + 1;
-            txtNodo.setForeground(Color.black);
-            txtNodoActual.setText("Nodo actual: "+ String.valueOf(nodoarbol.dato));
-            
-            if(txtizq.equalsIgnoreCase(txtLado.getText())){
-                txtLado.setText(txtder);
-            }
-            else if(txtder.equalsIgnoreCase(txtLado.getText())){
-                
-            }
-            
-            h = h - 1;
-            resp = false;
-            CrearArbol(nodoarbol);
-        }
-        else{
-            vuelta2();
-            vueltas = vueltas + 1;
-        }
-    }//GEN-LAST:event_btnNoMouseClicked
 
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
         String texto = txtbNodo.getText();
-        if(vueltas == 0){
+        if(texto.isEmpty() == false){
             nodoarbol.setDato(texto);
-            txtNodoActual.setText("Nodo actual: "+ nodoarbol.dato);
-            txtLado.setEnabled(true);
-            txtLado.setText(txtizq);
-            
-            btnSi.setOpaque(true);
-            btnSi.setContentAreaFilled(true);
-            btnSi.setBorderPainted(true);
-            btnSi.setEnabled(true);
-            btnSi.setText("Sí");
-
-            btnNo.setOpaque(true);
-            btnNo.setContentAreaFilled(true);
-            btnNo.setBorderPainted(true);
-            btnNo.setEnabled(true);
-            btnNo.setText("No");
 
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
             btnAceptar.setEnabled(false);
             
-            h = 1;
             x = 280; y = 10;
-            vueltas = 1;
             Lab6Graficar.Nodo(panelBoard.getGraphics(), texto, x, y, x, y - 15);
+            nodoarbol.setDato(texto);
             CrearArbol(nodoarbol);
-            //Pasarle alguna variable al método de la clase CrearArbol
         }
-        else if(vueltas > 2){
-            
+        else{
+            txtNodo.setForeground(Color.red);
         }
     }//GEN-LAST:event_btnAceptarMouseClicked
     
     private void CrearArbol(Nodo apnodo){
-        apnodo.dato = txtbNodo.getText();
-        
         String[] opc = {"Sí", "No"};
-        int op = JOptionPane.showOptionDialog(null, txtizq, "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        int op = JOptionPane.showOptionDialog(null, "¿Tiene "+ apnodo.dato +" un hijo a la izquierda?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
         
         if(op == 0){
+            h = h + 1;
             String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
             apnodo.setIzq(new Nodo(texto, null, null));
-            btnsi(1, apnodo.getIzq().dato.toString(), apnodo.getIzq());
+            btnsi(1, apnodo.getIzq().getDato().toString(), apnodo.getIzq(), apnodo);
             CrearArbol(apnodo.izq);
         }
         else{
             apnodo.setIzq(null);
+            if(h == 0){
+                //Hace nada
+            }
+            else{
+                x = x + 30; y = y - 30;
+            }
         }
         
-        op = JOptionPane.showOptionDialog(null, txtder, "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        op = JOptionPane.showOptionDialog(null, "¿Tiene "+ apnodo.dato +" un hijo a la derecha?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
         
         if(op == 0){
             if(apnodo.getIzq() == null && h != 1){
                 h = h + 1;
             }
-            
+            h_vieja = h;
             String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
             apnodo.setDer(new Nodo(texto, null, null));
-            btnsi(2, apnodo.getDer().dato.toString(), apnodo.getDer());
+            btnsi(2, apnodo.getDer().getDato().toString(), apnodo.getIzq(), apnodo);
             CrearArbol(apnodo.der);
         }
         else{
-            if(apnodo.getDer() != null){
-                x = x - 30; y = y - 30;
-            }
-            else if(apnodo.getDer() == null && apnodo.getIzq() != null){
-                x = x + 30; y = y - 30;
-            }
             apnodo.setDer(null);
+            if(h_vieja == h){
+                y = y - 30;
+                h = h - 1;
+            }
+            if(apnodo.getIzq() != null){
+                x = x + 30; y = y - 30;
+                h = h - 1;
+                h_vieja = h;
+            }
         }
     }
     
-    private void btnsi(int lado, String nomn, Nodo nd){
+    private void btnsi(int lado, String nomn, Nodo nd, Nodo original){
         //Guardan la posición anterior del círculo para dibujar las líneas
         int x1 = x; int y1 = y;
         
-        if(h == 0){
-            txtbNodo.setEnabled(false);
-            btnAceptar.setEnabled(false);
-            vuelta2();
-        }
-        else if(lado == 1){ //Si agrega a la izquierda
+        if(lado == 1){ //Si agrega a la izquierda
             //Da un margen más amplio entre los hijos si la altura es 1
             if(h == 1){
                 x = x - 70; y = y + 30;
@@ -258,78 +149,28 @@ public class Laboratorio6 extends javax.swing.JPanel {
             else{
                 x = x - 30; y = y + 30;
             }
-            
-            h = h + 1;
             Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
         }
         else if(lado == 2){ //Si agrega a la derecha
-            if(nd.getDer() == null){ //Si el nodo a agregar no existía
-                if(h == 1){
-                    x = x + 70; y = y + 30;
-                }
-                else{
-                    x = x + 30; y = y + 30;
-                }
-                
-                h = h + 1;
-                Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
+            if(h == 1 && original.getIzq() != null){
+                x1 = x1 + 10;
+                x = x + 90; y = y + 30;
             }
-            else if(nd.getDer() != null){ //Si había algún nodo
-                h = h - 1;
-                if(h == 0){
-                    txtbNodo.setEnabled(false);
-                    btnAceptar.setEnabled(false);
-                    vuelta2();
-                }
+            else if(h == 1 && original.getIzq() == null){
+                x = x + 70; y = y + 30;
             }
+            else{
+                x = x + 30; y = y + 30;
+            }
+            Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
         }
     }
-    
-    private void repintarArbol() {
-        panelBoard.repaint();
-        /*Rectangle tamanyo = panelBoard.getBounds();
-        JPanel panel = new JPanel();
-        panel = panelBoard;
-        panelBoard.removeAll();
-        panelBoard = panel;
-        panelBoard = new JPanel();
-        panelBoard.setBounds(tamanyo);
-        panelBoard.add(panel);
-        panelBoard.setVisible(true);*/
-    }
-    
-    // <editor-fold defaultstate="collapsed" desc="Vuelta2">
-    //Vuelta 2
-    private void vuelta2(){
-        txtLado.setText("");
-        
-        btnSi.setOpaque(false);
-        btnSi.setContentAreaFilled(false);
-        btnSi.setBorderPainted(false);
-        btnSi.setEnabled(false);
-        btnSi.setText("");
-
-        btnNo.setOpaque(false);
-        btnNo.setContentAreaFilled(false);
-        btnNo.setBorderPainted(false);
-        btnNo.setEnabled(false);
-        btnNo.setText("");
-
-        txtbNodo.setText("");
-        txtbNodo.setEditable(true);
-        txtNodo.setForeground(Color.black);
-        btnAceptar.setEnabled(true);
-    }
-    //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
-    private javax.swing.JButton btnNo;
-    private javax.swing.JButton btnSi;
     private javax.swing.JPanel panelBoard;
     private javax.swing.JLabel txtLado;
     private javax.swing.JLabel txtNodo;
-    private javax.swing.JLabel txtNodoActual;
     private javax.swing.JTextField txtbNodo;
     // End of variables declaration//GEN-END:variables
 }
