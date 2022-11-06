@@ -13,9 +13,12 @@ public class Laboratorio6 extends javax.swing.JPanel {
     int h = 0; int h_vieja = 0;
     int x = 280, y = 10;
     String nodoA;
+    String preorden = "", inorden = "", posorden = "";
     
     public Laboratorio6() {
         initComponents();
+        jScrollPane1.setVisible(false);
+        jScrollPane1.setEnabled(false);
     }
     
     @SuppressWarnings("unchecked")
@@ -25,8 +28,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
         panelBoard = new javax.swing.JPanel();
         txtNodo = new javax.swing.JLabel();
         txtbNodo = new javax.swing.JTextField();
-        txtLado = new javax.swing.JLabel();
         btnAceptar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableOrdenes = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(580, 380));
@@ -58,9 +62,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         txtbNodo.setText("A");
         add(txtbNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 50, -1));
 
-        txtLado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        add(txtLado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
-
         btnAceptar.setBackground(new java.awt.Color(153, 102, 255));
         btnAceptar.setForeground(new java.awt.Color(255, 255, 255));
         btnAceptar.setText("Aceptar");
@@ -70,6 +71,34 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
         });
         add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, 30));
+
+        tableOrdenes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Preorden", null},
+                {"Inorden", null},
+                {"Posorden", null}
+            },
+            new String [] {
+                "Orden", ""
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableOrdenes);
+        if (tableOrdenes.getColumnModel().getColumnCount() > 0) {
+            tableOrdenes.getColumnModel().getColumn(0).setMinWidth(50);
+            tableOrdenes.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tableOrdenes.getColumnModel().getColumn(0).setMaxWidth(50);
+            tableOrdenes.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 260, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
@@ -79,6 +108,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
 
             txtbNodo.setText("");
             txtNodo.setForeground(Color.black);
+            txtbNodo.setEnabled(false);
             btnAceptar.setEnabled(false);
             
             x = 280; y = 10;
@@ -86,6 +116,16 @@ public class Laboratorio6 extends javax.swing.JPanel {
             nodoarbol.setDato(texto);
             nodoA = texto;
             CrearArbol(nodoarbol);
+            
+            preorden(nodoarbol);
+            inorden(nodoarbol);
+            posorden(nodoarbol);
+            
+            jScrollPane1.setVisible(true);
+            jScrollPane1.setEnabled(true);
+            tableOrdenes.setValueAt(preorden, 0, 1);
+            tableOrdenes.setValueAt(inorden, 1, 1);
+            tableOrdenes.setValueAt(posorden, 2, 1);
         }
         else{
             txtNodo.setForeground(Color.red);
@@ -115,12 +155,6 @@ public class Laboratorio6 extends javax.swing.JPanel {
         }
         else{
             apnodo.setIzq(null);
-            if(h == 0){
-                //Hace nada
-            }
-            else{
-                x = x + 30; y = y - 30;
-            }
         }
         
         f.setLocation(630, 480);
@@ -137,6 +171,11 @@ public class Laboratorio6 extends javax.swing.JPanel {
             if(nodoA.equalsIgnoreCase(apnodo.getDato().toString()) && apnodo.getIzq() != null){
                 x = 280; y = 10;
                 h = 1;
+            }
+            if(apnodo.getIzq() != null){
+                if(apnodo.getIzq().getDer() != null){
+                    x = x - 30;
+                }
             }
             
             h_vieja = h;
@@ -158,6 +197,9 @@ public class Laboratorio6 extends javax.swing.JPanel {
                 x = x + 30; y = y - 30;
                 h = h - 1;
                 h_vieja = h;
+            }
+            else{
+                x = x + 30; y = y - 30;
             }
         }
     }
@@ -190,10 +232,35 @@ public class Laboratorio6 extends javax.swing.JPanel {
         }
     }
     
+    private void preorden(Nodo nodo){
+        if(nodo != null){
+            preorden += nodo.getDato().toString();
+            preorden(nodo.getIzq());
+            preorden(nodo.getDer());
+        }
+    }
+    
+    private void inorden(Nodo nodo){
+        if(nodo != null){
+            inorden(nodo.getIzq());
+            inorden += nodo.getDato().toString();
+            inorden(nodo.getDer());
+        }
+    }
+    
+    private void posorden(Nodo nodo){
+        if(nodo != null){
+            posorden(nodo.getIzq());
+            posorden(nodo.getDer());
+            posorden += nodo.getDato().toString();
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panelBoard;
-    private javax.swing.JLabel txtLado;
+    private javax.swing.JTable tableOrdenes;
     private javax.swing.JLabel txtNodo;
     private javax.swing.JTextField txtbNodo;
     // End of variables declaration//GEN-END:variables
