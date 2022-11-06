@@ -94,13 +94,23 @@ public class Laboratorio6 extends javax.swing.JPanel {
     
     private void CrearArbol(Nodo apnodo){
         String[] opc = {"Sí", "No"};
-        int op = JOptionPane.showOptionDialog(null, "¿Tiene "+ apnodo.dato +" un hijo a la izquierda?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        
+        JFrame f = new JFrame();
+        f.setLocation(630, 480);
+        f.setVisible(true);
+        
+        int op = JOptionPane.showOptionDialog(f, "¿Tiene "+ apnodo.dato +" un hijo a la izquierda?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        
+        f.setVisible(false);
         
         if(op == 0){
             h = h + 1;
-            String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
+            f.setLocation(630, 480);
+            f.setVisible(true);
+            String texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+            f.setVisible(false);
             apnodo.setIzq(new Nodo(texto, null, null));
-            btnsi(1, apnodo.getIzq().getDato().toString(), apnodo.getIzq(), apnodo);
+            btnsi(1, apnodo.getIzq().getDato().toString(), apnodo);
             CrearArbol(apnodo.izq);
         }
         else{
@@ -113,7 +123,12 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
         }
         
-        op = JOptionPane.showOptionDialog(null, "¿Tiene "+ apnodo.dato +" un hijo a la derecha?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        f.setLocation(630, 480);
+        f.setVisible(true);
+        
+        op = JOptionPane.showOptionDialog(f, "¿Tiene "+ apnodo.dato +" un hijo a la derecha?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
+        
+        f.setVisible(false);
         
         if(op == 0){
             if(apnodo.getIzq() == null && h != 1){
@@ -125,9 +140,12 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
             
             h_vieja = h;
-            String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
+            f.setLocation(630, 480);
+            f.setVisible(true);
+            String texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+            f.setVisible(false);
             apnodo.setDer(new Nodo(texto, null, null));
-            btnsi(2, apnodo.getDer().getDato().toString(), apnodo.getIzq(), apnodo);
+            btnsi(2, apnodo.getDer().getDato().toString(), apnodo);
             CrearArbol(apnodo.der);
         }
         else{
@@ -144,7 +162,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         }
     }
     
-    private void btnsi(int lado, String nomn, Nodo nd, Nodo original){
+    private void btnsi(int lado, String nomn, Nodo original){
         //Guardan la posición anterior del círculo para dibujar las líneas
         int x1 = x; int y1 = y;
         
@@ -171,7 +189,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
         }
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JPanel panelBoard;
