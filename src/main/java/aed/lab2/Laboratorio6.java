@@ -12,6 +12,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     Nodo nodoarbol = new Nodo("A", null, null);
     int h = 0; int h_vieja = 0;
     int x = 280, y = 10;
+    String nodoA;
     
     public Laboratorio6() {
         initComponents();
@@ -83,6 +84,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             x = 280; y = 10;
             Lab6Graficar.Nodo(panelBoard.getGraphics(), texto, x, y, x, y - 15);
             nodoarbol.setDato(texto);
+            nodoA = texto;
             CrearArbol(nodoarbol);
         }
         else{
@@ -117,6 +119,11 @@ public class Laboratorio6 extends javax.swing.JPanel {
             if(apnodo.getIzq() == null && h != 1){
                 h = h + 1;
             }
+            if(nodoA.equalsIgnoreCase(apnodo.getDato().toString()) && apnodo.getIzq() != null){
+                x = 280; y = 10;
+                h = 1;
+            }
+            
             h_vieja = h;
             String texto = JOptionPane.showInputDialog("Ingrese el nombre:");
             apnodo.setDer(new Nodo(texto, null, null));
@@ -153,8 +160,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         }
         else if(lado == 2){ //Si agrega a la derecha
             if(h == 1 && original.getIzq() != null){
-                x1 = x1 + 10;
-                x = x + 90; y = y + 30;
+                x = x + 70; y = y + 30;
             }
             else if(h == 1 && original.getIzq() == null){
                 x = x + 70; y = y + 30;
