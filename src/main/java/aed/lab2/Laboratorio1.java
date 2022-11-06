@@ -117,26 +117,23 @@ public class Laboratorio1 extends javax.swing.JPanel {
         tpanelLaboratorio1.setBackground(new java.awt.Color(255, 255, 255));
 
         panelEjercicio1.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio1.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio1.setToolTipText("");
         panelEjercicio1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio1.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio1.setText("Ejercicio 1");
-        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         txtTamEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj1.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj1.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio1.add(txtTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio1.add(txtTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj1.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj1.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio1.add(txtbTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio1.add(txtbTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj1.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj1.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,7 +144,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj1MouseClicked(evt);
             }
         });
-        panelEjercicio1.add(btnTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio1.add(btnTamEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. semestres y promedio", "Ver un registro" }));
         cmboxEj1.setEnabled(false);
@@ -156,20 +153,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj1ItemStateChanged(evt);
             }
         });
-        panelEjercicio1.add(cmboxEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio1.add(cmboxEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj1.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj1.setText("Ingrese el nuevo alumno:");
-        panelEjercicio1.add(txtArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio1.add(txtArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj1.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj1.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj1.setEnabled(false);
-        panelEjercicio1.add(txtbArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio1.add(txtbArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj1.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj1.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,11 +177,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj1MouseClicked(evt);
             }
         });
-        panelEjercicio1.add(btnArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio1.add(btnArregloEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj1.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio1.add(txtArregloCeldaEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj1.setBackground(new java.awt.Color(102, 102, 102));
@@ -196,12 +191,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Alumno", "Semestres Cur", "Promedio"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tableEj1);
 
-        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 280, 330));
 
         btnVerEj1.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj1.setForeground(new java.awt.Color(255, 255, 255));
@@ -213,31 +216,28 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj1MouseClicked(evt);
             }
         });
-        panelEjercicio1.add(btnVerEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio1.add(btnVerEj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 1", panelEjercicio1);
 
         panelEjercicio2.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio2.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio2.setToolTipText("");
         panelEjercicio2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio2.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio2.setText("Ejercicio 2");
-        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         txtTamEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj2.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj2.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio2.add(txtTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio2.add(txtTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtbTamEj2.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj2.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio2.add(txtbTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio2.add(txtbTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
 
         btnTamEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -248,7 +248,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio2.add(btnTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
 
         cmboxEj2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. estado moroso", "Ver un registro" }));
         cmboxEj2.setEnabled(false);
@@ -257,20 +257,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj2ItemStateChanged(evt);
             }
         });
-        panelEjercicio2.add(cmboxEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio2.add(cmboxEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
 
         txtArregloEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj2.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setText("Ingrese el nuevo cliente:");
-        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtbArregloEj2.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj2.setEnabled(false);
-        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
 
         btnArregloEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,11 +281,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
 
         txtArregloCeldaEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj2.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio2.add(txtArregloCeldaEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj2.setBackground(new java.awt.Color(102, 102, 102));
@@ -297,12 +295,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Cliente", "Telefono", "Salario", "Est. Moroso"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane8.setViewportView(tableEj2);
 
-        panelEjercicio2.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio2.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -314,31 +320,28 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnVerEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio2.add(btnVerEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 2", panelEjercicio2);
 
         panelEjercicio3.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio3.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio3.setToolTipText("");
         panelEjercicio3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio3.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio3.setText("Ejercicio 3");
         panelEjercicio3.add(txtEjercicio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj3.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj3.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio3.add(txtTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio3.add(txtTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtbTamEj3.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj3.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio3.add(txtbTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio3.add(txtbTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
 
         btnTamEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -349,7 +352,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio3.add(btnTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
 
         cmboxEj3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. edad", "Ver un registro" }));
         cmboxEj3.setEnabled(false);
@@ -358,20 +361,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj3ItemStateChanged(evt);
             }
         });
-        panelEjercicio3.add(cmboxEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio3.add(cmboxEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
 
         txtArregloEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj3.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setText("Ingrese el nuevo empleado:");
-        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtbArregloEj3.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj3.setEnabled(false);
-        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
 
         btnArregloEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -383,11 +385,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
 
         txtArregloCeldaEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj3.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio3.add(txtArregloCeldaEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj3.setBackground(new java.awt.Color(102, 102, 102));
@@ -398,12 +399,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Nombre Emp", "Sexo", "Edad"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane9.setViewportView(tableEj3);
 
-        panelEjercicio3.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio3.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 280, 330));
 
         btnVerEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -415,31 +424,28 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnVerEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio3.add(btnVerEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 3", panelEjercicio3);
 
         panelEjercicio4.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio4.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio4.setToolTipText("");
         panelEjercicio4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio4.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio4.setText("Ejercicio 4");
         panelEjercicio4.add(txtEjercicio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj4.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj4.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio4.add(txtTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio4.add(txtTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtbTamEj4.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj4.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio4.add(txtbTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio4.add(txtbTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
 
         btnTamEj4.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj4.setForeground(new java.awt.Color(255, 255, 255));
@@ -450,7 +456,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio4.add(btnTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
 
         cmboxEj4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. antigüedad", "Ver un registro" }));
         cmboxEj4.setEnabled(false);
@@ -459,20 +465,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj4ItemStateChanged(evt);
             }
         });
-        panelEjercicio4.add(cmboxEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio4.add(cmboxEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
 
         txtArregloEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj4.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj4.setText("Ingrese el nuevo empleado:");
-        panelEjercicio4.add(txtArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio4.add(txtArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtbArregloEj4.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj4.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj4.setEnabled(false);
-        panelEjercicio4.add(txtbArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio4.add(txtbArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
 
         btnArregloEj4.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj4.setForeground(new java.awt.Color(255, 255, 255));
@@ -484,11 +489,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio4.add(btnArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
 
         txtArregloCeldaEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj4.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio4.add(txtArregloCeldaEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj4.setBackground(new java.awt.Color(102, 102, 102));
@@ -499,12 +503,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Nombre Emp", "Direccion", "Edad", "Sexo", "Años anti"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane10.setViewportView(tableEj4);
 
-        panelEjercicio4.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio4.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj4.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj4.setForeground(new java.awt.Color(255, 255, 255));
@@ -516,31 +528,28 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnVerEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio4.add(btnVerEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 4", panelEjercicio4);
 
         panelEjercicio5.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio5.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio5.setToolTipText("");
         panelEjercicio5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio5.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio5.setText("Ejercicio 5");
         panelEjercicio5.add(txtEjercicio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj5.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj5.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio5.add(txtTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio5.add(txtTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtbTamEj5.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj5.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio5.add(txtbTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio5.add(txtbTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
 
         btnTamEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -551,7 +560,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio5.add(btnTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
 
         cmboxEj5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. precio", "Ver un registro" }));
         cmboxEj5.setEnabled(false);
@@ -560,20 +569,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj5ItemStateChanged(evt);
             }
         });
-        panelEjercicio5.add(cmboxEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio5.add(cmboxEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
 
         txtArregloEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj5.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj5.setText("Ingrese la ubicación del nuevo dpto.:");
-        panelEjercicio5.add(txtArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio5.add(txtArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtbArregloEj5.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj5.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj5.setEnabled(false);
-        panelEjercicio5.add(txtbArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio5.add(txtbArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
 
         btnArregloEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -585,11 +593,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio5.add(btnArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
 
         txtArregloCeldaEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj5.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio5.add(txtArregloCeldaEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj5.setBackground(new java.awt.Color(102, 102, 102));
@@ -600,12 +607,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Ubicacion Depa", "Extension Depa", "Precio"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane11.setViewportView(tableEj5);
 
-        panelEjercicio5.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio5.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 300, 330));
 
         btnVerEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -617,31 +632,28 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnVerEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio5.add(btnVerEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 5", panelEjercicio5);
 
         panelEjercicio6.setBackground(new java.awt.Color(255, 255, 255));
-        panelEjercicio6.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio6.setToolTipText("");
         panelEjercicio6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtEjercicio6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtEjercicio6.setForeground(new java.awt.Color(0, 0, 0));
         txtEjercicio6.setText("Ejercicio 6");
         panelEjercicio6.add(txtEjercicio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtTamEj6.setForeground(new java.awt.Color(0, 0, 0));
         txtTamEj6.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio6.add(txtTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        panelEjercicio6.add(txtTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtbTamEj6.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj6.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio6.add(txtbTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
+        panelEjercicio6.add(txtbTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
 
         btnTamEj6.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj6.setForeground(new java.awt.Color(255, 255, 255));
@@ -652,7 +664,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 80, 30));
+        panelEjercicio6.add(btnTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
 
         cmboxEj6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Mod. total de ventas", "Ver un registro" }));
         cmboxEj6.setEnabled(false);
@@ -661,20 +673,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj6ItemStateChanged(evt);
             }
         });
-        panelEjercicio6.add(cmboxEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, -1));
+        panelEjercicio6.add(cmboxEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
 
         txtArregloEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloEj6.setForeground(new java.awt.Color(0, 0, 0));
         txtArregloEj6.setText("Ingrese el nuevo vendedor:");
-        panelEjercicio6.add(txtArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        panelEjercicio6.add(txtArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         txtbArregloEj6.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj6.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj6.setEnabled(false);
-        panelEjercicio6.add(txtbArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 190, -1));
+        panelEjercicio6.add(txtbArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
 
         btnArregloEj6.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj6.setForeground(new java.awt.Color(255, 255, 255));
@@ -686,11 +697,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 80, 30));
+        panelEjercicio6.add(btnArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
 
         txtArregloCeldaEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtArregloCeldaEj6.setForeground(new java.awt.Color(0, 0, 0));
         panelEjercicio6.add(txtArregloCeldaEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         tableEj6.setBackground(new java.awt.Color(102, 102, 102));
@@ -701,12 +711,20 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-
+                "Nombre Vendedor", "Total Ventas"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane12.setViewportView(tableEj6);
 
-        panelEjercicio6.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 240, 330));
+        panelEjercicio6.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj6.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj6.setForeground(new java.awt.Color(255, 255, 255));
@@ -718,7 +736,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnVerEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 190, 50));
+        panelEjercicio6.add(btnVerEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 6", panelEjercicio6);
 
@@ -726,7 +744,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpanelLaboratorio1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+            .addComponent(tpanelLaboratorio1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -739,7 +757,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 1">
     //Ejercicio 1
     private void btnTamEj1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj1MouseClicked
-        tam = Integer.parseInt(txtbTamEj1.getText());
+        String a = txtbTamEj1.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj1.setEnabled(true);
         txtbArregloEj1.setEnabled(true);
         btnArregloEj1.setEnabled(true);
@@ -767,6 +791,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj1ItemStateChanged
 
     private void btnArregloEj1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj1MouseClicked
+        String a = txtbArregloEj1.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj1;
         var txtbActual = txtbArregloEj1;
         var btnActual = btnVerEj1;
@@ -795,7 +825,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 2">
     //Ejercicio 2
     private void btnTamEj2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj2MouseClicked
-        tam = Integer.parseInt(txtbTamEj2.getText());
+        String a = txtbTamEj2.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj2.setEnabled(true);
         txtbArregloEj2.setEnabled(true);
         btnArregloEj2.setEnabled(true);
@@ -823,6 +859,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj2ItemStateChanged
 
     private void btnArregloEj2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj2MouseClicked
+        String a = txtbArregloEj2.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj2;
         var txtbActual = txtbArregloEj2;
         var btnActual = btnVerEj2;
@@ -852,7 +894,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 3">
     //Ejercicio 3
     private void btnTamEj3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj3MouseClicked
-        tam = Integer.parseInt(txtbTamEj3.getText());
+        String a = txtbTamEj3.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj3.setEnabled(true);
         txtbArregloEj3.setEnabled(true);
         btnArregloEj3.setEnabled(true);
@@ -880,6 +928,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj3ItemStateChanged
 
     private void btnArregloEj3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj3MouseClicked
+        String a = txtbArregloEj3.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj3;
         var txtbActual = txtbArregloEj3;
         var btnActual = btnVerEj3;
@@ -909,7 +963,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 4">    
     //Ejercicio 4
     private void btnTamEj4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj4MouseClicked
-        tam = Integer.parseInt(txtbTamEj4.getText());
+        String a = txtbTamEj4.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj4.setEnabled(true);
         txtbArregloEj4.setEnabled(true);
         btnArregloEj4.setEnabled(true);
@@ -938,6 +998,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj4ItemStateChanged
 
     private void btnArregloEj4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj4MouseClicked
+        String a = txtbArregloEj4.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj4;
         var txtbActual = txtbArregloEj4;
         var btnActual = btnVerEj4;
@@ -969,7 +1035,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 5">
     //Ejercicio 5
     private void btnTamEj5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj5MouseClicked
-        tam = Integer.parseInt(txtbTamEj5.getText());
+        String a = txtbTamEj5.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj5.setEnabled(true);
         txtbArregloEj5.setEnabled(true);
         btnArregloEj5.setEnabled(true);
@@ -998,6 +1070,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj5ItemStateChanged
 
     private void btnArregloEj5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj5MouseClicked
+        String a = txtbArregloEj5.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj5;
         var txtbActual = txtbArregloEj5;
         var btnActual = btnVerEj5;
@@ -1026,7 +1104,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Ejercicio 6">
     //Ejercicio 6
     private void btnTamEj6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamEj6MouseClicked
-        tam = Integer.parseInt(txtbTamEj6.getText());
+        String a = txtbTamEj6.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto del tamaño no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tam = Integer.parseInt(a);
         cmboxEj6.setEnabled(true);
         txtbArregloEj6.setEnabled(true);
         btnArregloEj6.setEnabled(true);
@@ -1052,6 +1136,12 @@ public class Laboratorio1 extends javax.swing.JPanel {
     }//GEN-LAST:event_cmboxEj6ItemStateChanged
 
     private void btnArregloEj6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArregloEj6MouseClicked
+        String a = txtbArregloEj6.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         var cmboxActual = cmboxEj6;
         var txtbActual = txtbArregloEj6;
         var btnActual = btnVerEj6;

@@ -453,7 +453,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
 
         txtbNombre4.setText("");
         txtbNumEmp.setText("");
-            txtbSalario.setText("");
+        txtbSalario.setText("");
         
     }//GEN-LAST:event_btnAgregar3ActionPerformed
 
