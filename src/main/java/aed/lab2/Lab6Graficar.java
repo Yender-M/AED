@@ -6,10 +6,6 @@ package aed.lab2;
 
 import java.awt.Graphics;
 
-/**
- *
- * @author pavel
- */
 public class Lab6Graficar {
     
     

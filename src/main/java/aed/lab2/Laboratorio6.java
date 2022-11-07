@@ -50,7 +50,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             .addGap(0, 288, Short.MAX_VALUE)
         );
 
-        add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 560, 290));
+        add(panelBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 560, 290));
 
         txtNodo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtNodo.setText("Nombre del nodo:");
@@ -98,7 +98,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             tableOrdenes.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 260, 60));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 260, 70));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAceptarMouseClicked
@@ -173,7 +173,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
                 h = 1;
             }
             if(apnodo.getIzq() != null){
-                if(apnodo.getIzq().getDer() != null){
+                if(apnodo.getIzq().getDer() != null && h > 1){
                     x = x - 30;
                 }
             }
