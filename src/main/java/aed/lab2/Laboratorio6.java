@@ -194,12 +194,17 @@ public class Laboratorio6 extends javax.swing.JPanel {
                 h = h - 1;
             }
             if(apnodo.getIzq() != null){
-                x = x + 30; y = y - 30;
                 h = h - 1;
                 h_vieja = h;
+                if(apnodo.getIzq().getDer() != null){
+                    y = 10 + ((h - 1) * 30);
+                }
+                else{
+                    x = x + 30; y = y - 30;
+                }
             }
             else{
-                x = x + 30; y = y - 30;
+                x = x + 30; y = 10 + ((h - 1) * 30);
             }
         }
     }
@@ -225,6 +230,17 @@ public class Laboratorio6 extends javax.swing.JPanel {
             else if(h == 1 && original.getIzq() == null){
                 x = x + 70; y = y + 30;
             }
+            else if(original.getIzq().getDer() != null){
+                    if(original.getIzq().getDer().getIzq() != null && original.getIzq().getDer().getDer() == null){
+                        x = x + 30; y = 10 + ((h - 1) * 30);
+                        y1 = y1 - 30;
+                    }
+                    else if(original.getIzq().getDer().getDer() != null){
+                        y = 10 + ((h - 1) * 30) - 30;
+                        x1 = x1 - 30;
+                        y1 = y1 - 60;
+                    } 
+                }
             else{
                 x = x + 30; y = y + 30;
             }
