@@ -122,7 +122,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
         txtEjercicio1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEjercicio1.setText("Ejercicio 1");
-        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj1.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -204,7 +204,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableEj1);
 
-        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 280, 330));
+        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj1.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj1.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,18 +226,18 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
         txtEjercicio2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEjercicio2.setText("Ejercicio 2");
-        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        panelEjercicio2.add(txtEjercicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         txtTamEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtTamEj2.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio2.add(txtTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        panelEjercicio2.add(txtTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj2.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj2.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio2.add(txtbTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
+        panelEjercicio2.add(txtbTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -248,7 +248,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
+        panelEjercicio2.add(btnTamEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. estado moroso", "Ver un registro" }));
         cmboxEj2.setEnabled(false);
@@ -257,19 +257,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj2ItemStateChanged(evt);
             }
         });
-        panelEjercicio2.add(cmboxEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
+        panelEjercicio2.add(cmboxEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArregloEj2.setText("Ingrese el nuevo cliente:");
-        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        panelEjercicio2.add(txtArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj2.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj2.setEnabled(false);
-        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
+        panelEjercicio2.add(txtbArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj2.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj2.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,7 +281,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
+        panelEjercicio2.add(btnArregloEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj2.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -320,7 +320,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj2MouseClicked(evt);
             }
         });
-        panelEjercicio2.add(btnVerEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
+        panelEjercicio2.add(btnVerEj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 2", panelEjercicio2);
 
@@ -335,13 +335,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
         txtTamEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtTamEj3.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio3.add(txtTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        panelEjercicio3.add(txtTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj3.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj3.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio3.add(txtbTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
+        panelEjercicio3.add(txtbTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -352,7 +352,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
+        panelEjercicio3.add(btnTamEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. edad", "Ver un registro" }));
         cmboxEj3.setEnabled(false);
@@ -361,19 +361,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj3ItemStateChanged(evt);
             }
         });
-        panelEjercicio3.add(cmboxEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
+        panelEjercicio3.add(cmboxEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArregloEj3.setText("Ingrese el nuevo empleado:");
-        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        panelEjercicio3.add(txtArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj3.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj3.setEnabled(false);
-        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
+        panelEjercicio3.add(txtbArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -385,7 +385,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
+        panelEjercicio3.add(btnArregloEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj3.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -412,7 +412,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
         });
         jScrollPane9.setViewportView(tableEj3);
 
-        panelEjercicio3.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 280, 330));
+        panelEjercicio3.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj3.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj3.setForeground(new java.awt.Color(255, 255, 255));
@@ -424,7 +424,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj3MouseClicked(evt);
             }
         });
-        panelEjercicio3.add(btnVerEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
+        panelEjercicio3.add(btnVerEj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 3", panelEjercicio3);
 
@@ -439,13 +439,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
         txtTamEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtTamEj4.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio4.add(txtTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        panelEjercicio4.add(txtTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj4.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj4.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio4.add(txtbTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
+        panelEjercicio4.add(txtbTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj4.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj4.setForeground(new java.awt.Color(255, 255, 255));
@@ -456,7 +456,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
+        panelEjercicio4.add(btnTamEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. antigüedad", "Ver un registro" }));
         cmboxEj4.setEnabled(false);
@@ -465,19 +465,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj4ItemStateChanged(evt);
             }
         });
-        panelEjercicio4.add(cmboxEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
+        panelEjercicio4.add(cmboxEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArregloEj4.setText("Ingrese el nuevo empleado:");
-        panelEjercicio4.add(txtArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        panelEjercicio4.add(txtArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj4.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj4.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj4.setEnabled(false);
-        panelEjercicio4.add(txtbArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
+        panelEjercicio4.add(txtbArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj4.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj4.setForeground(new java.awt.Color(255, 255, 255));
@@ -489,7 +489,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
+        panelEjercicio4.add(btnArregloEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj4.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -528,7 +528,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj4MouseClicked(evt);
             }
         });
-        panelEjercicio4.add(btnVerEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
+        panelEjercicio4.add(btnVerEj4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 4", panelEjercicio4);
 
@@ -543,13 +543,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
         txtTamEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtTamEj5.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio5.add(txtTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        panelEjercicio5.add(txtTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj5.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj5.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio5.add(txtbTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
+        panelEjercicio5.add(txtbTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -560,7 +560,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
+        panelEjercicio5.add(btnTamEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Dar de baja", "Mod. precio", "Ver un registro" }));
         cmboxEj5.setEnabled(false);
@@ -569,19 +569,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj5ItemStateChanged(evt);
             }
         });
-        panelEjercicio5.add(cmboxEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
+        panelEjercicio5.add(cmboxEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArregloEj5.setText("Ingrese la ubicación del nuevo dpto.:");
-        panelEjercicio5.add(txtArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        panelEjercicio5.add(txtArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj5.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj5.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj5.setEnabled(false);
-        panelEjercicio5.add(txtbArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
+        panelEjercicio5.add(txtbArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -593,7 +593,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
+        panelEjercicio5.add(btnArregloEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj5.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -620,7 +620,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
         });
         jScrollPane11.setViewportView(tableEj5);
 
-        panelEjercicio5.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 300, 330));
+        panelEjercicio5.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 290, 330));
 
         btnVerEj5.setBackground(new java.awt.Color(153, 102, 255));
         btnVerEj5.setForeground(new java.awt.Color(255, 255, 255));
@@ -632,7 +632,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj5MouseClicked(evt);
             }
         });
-        panelEjercicio5.add(btnVerEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
+        panelEjercicio5.add(btnVerEj5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 5", panelEjercicio5);
 
@@ -647,13 +647,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
         txtTamEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtTamEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtTamEj6.setText("Ingrese el tamaño del arreglo:");
-        panelEjercicio6.add(txtTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        panelEjercicio6.add(txtTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         txtbTamEj6.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamEj6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamEj6.setForeground(new java.awt.Color(255, 255, 255));
         txtbTamEj6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio6.add(txtbTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, -1));
+        panelEjercicio6.add(txtbTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 190, -1));
 
         btnTamEj6.setBackground(new java.awt.Color(153, 102, 255));
         btnTamEj6.setForeground(new java.awt.Color(255, 255, 255));
@@ -664,7 +664,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnTamEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 80, 30));
+        panelEjercicio6.add(btnTamEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 80, 30));
 
         cmboxEj6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dar de alta", "Mod. total de ventas", "Ver un registro" }));
         cmboxEj6.setEnabled(false);
@@ -673,19 +673,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 cmboxEj6ItemStateChanged(evt);
             }
         });
-        panelEjercicio6.add(cmboxEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 190, -1));
+        panelEjercicio6.add(cmboxEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 190, -1));
 
         txtArregloEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArregloEj6.setText("Ingrese el nuevo vendedor:");
-        panelEjercicio6.add(txtArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        panelEjercicio6.add(txtArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         txtbArregloEj6.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloEj6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloEj6.setForeground(new java.awt.Color(255, 255, 255));
         txtbArregloEj6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtbArregloEj6.setEnabled(false);
-        panelEjercicio6.add(txtbArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
+        panelEjercicio6.add(txtbArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 190, -1));
 
         btnArregloEj6.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloEj6.setForeground(new java.awt.Color(255, 255, 255));
@@ -697,7 +697,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnArregloEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 80, 30));
+        panelEjercicio6.add(btnArregloEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 80, 30));
 
         txtArregloCeldaEj6.setBackground(new java.awt.Color(0, 0, 0));
         txtArregloCeldaEj6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -736,7 +736,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 btnVerEj6MouseClicked(evt);
             }
         });
-        panelEjercicio6.add(btnVerEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 190, 50));
+        panelEjercicio6.add(btnVerEj6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 50));
 
         tpanelLaboratorio1.addTab("Ejercicio 6", panelEjercicio6);
 
@@ -774,19 +774,19 @@ public class Laboratorio1 extends javax.swing.JPanel {
     private void cmboxEj1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmboxEj1ItemStateChanged
         switch(cmboxEj1.getSelectedIndex()){
             case 0:
-            txtArregloEj1.setText("Ingrese el nuevo alumno:");
-            break;
+                txtArregloEj1.setText("Ingrese el nuevo alumno:");
+                break;
             case 1:
-            txtArregloEj1.setText("Ingrese el alumno a dar de baja:");
-            break;
+                txtArregloEj1.setText("Ingrese el alumno a dar de baja:");
+                break;
             case 2:
-            txtArregloEj1.setText("Ingrese el alumno a modificar:");
-            break;
+                txtArregloEj1.setText("Ingrese el alumno a modificar:");
+                break;
             case 3:
-            txtArregloEj1.setText("Ingrese el alumno a ver:");
-            break;
+                txtArregloEj1.setText("Ingrese el alumno a ver:");
+                break;
             default:
-            break;
+                break;
         }
     }//GEN-LAST:event_cmboxEj1ItemStateChanged
 
@@ -1253,10 +1253,10 @@ public class Laboratorio1 extends javax.swing.JPanel {
                         case 2:
                             arregloB[cuenta] = Integer.parseInt(txtbActual.getText());
                             txtbActual.setText("");
-                            txtActual.setText("Ingrese el nuevo cliente:");
+                            txtActual.setText("Ingrese el estado moroso:");
                             break;
                         case 3:
-                            arregloB[cuenta] = Integer.parseInt(txtbActual.getText());
+                            arregloA[cuenta] = Integer.parseInt(txtbActual.getText());
                             txtbActual.setText("");
                             txtActual.setText("Ingrese el nuevo empleado:");
                             break;
@@ -1272,7 +1272,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                             break;
                     }
 
-                    if(ej == 1 || ej == 2 || ej == 3 || ej == 5){
+                    if(ej == 1 || ej == 3 || ej == 5){
                         btnActual.setEnabled(true);
                         cuenta = cuenta + 1;
                         aux = 0;
@@ -1281,8 +1281,13 @@ public class Laboratorio1 extends javax.swing.JPanel {
                         aux = aux + 1;
                     }
                 }
-                else if(aux == 3 && cuenta < tam && ej != 1 && ej != 2 && ej != 3 && ej != 5 && ej != 6){
+                else if(aux == 3 && cuenta < tam && ej != 1 && ej != 3 && ej != 5 && ej != 6){
                     switch(ej){
+                        case 2:
+                            arregloE[cuenta] = txtbActual.getText();
+                            txtbActual.setText("");
+                            txtActual.setText("Ingrese el nuevo cliente:");
+                            break;
                         case 4:
                             arregloE2[cuenta] = txtbActual.getText();
                             txtbActual.setText("");
@@ -1290,7 +1295,14 @@ public class Laboratorio1 extends javax.swing.JPanel {
                             break;
                     }
                     
-                    aux = aux + 1;
+                    if(ej == 2){
+                        btnActual.setEnabled(true);
+                        cuenta = cuenta + 1;
+                        aux = 0;
+                    }
+                    else{
+                        aux = aux + 1;
+                    }
                 }
                 else if(aux == 4 && cuenta < tam && ej != 1 && ej != 2 && ej != 3 && ej != 5 && ej != 6){
                     switch(ej){
@@ -1365,7 +1377,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                     for(i = 0; i <= n && !(arregloC.equalsIgnoreCase(arregloS[i])); i++);
 
                     if(i > n){
-                        txtActual.setText("Alumno no hallado, ingrese de nuevo:");
+                        txtActual.setText("Vendedor no hallado, ingrese de nuevo:");
                     }
                     else{
                         //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
@@ -1385,23 +1397,80 @@ public class Laboratorio1 extends javax.swing.JPanel {
                         for(i = 0; i <= n && !(arregloC.equalsIgnoreCase(arregloS[i])); i++);
 
                         if(i > n){
-                            txtActual.setText("Cliente no hallado, ingrese de nuevo:");
+                            switch(ej){
+                                case 1:
+                                    txtActual.setText("Alumno no hallado, ingrese de nuevo:");
+                                    break;
+                                case 2:
+                                    txtActual.setText("Cliente no hallado, ingrese de nuevo:");
+                                    break;
+                                case 3:
+                                    txtActual.setText("Empleado no hallado, ingrese de nuevo:");
+                                    break;
+                                case 4:
+                                    txtActual.setText("Empleado no hallado, ingrese de nuevo:");
+                                    break;
+                                case 5:
+                                    txtActual.setText("Dpto. no hallado, ingrese de nuevo:");
+                                    break;
+                                case 6:
+                                    txtActual.setText("Vendedor no hallado, ingrese de nuevo:");
+                                    break;
+                            }
                             arregloC = "";
                         }
                         else{
-                            txtActual.setText("Ingrese el número de semestres cursados:");
+                            switch(ej) {
+                                case 1:
+                                    txtActual.setText("Ingrese el número de semestres cursados:");
+                                    break;
+                                case 2:
+                                    txtActual.setText("Ingrese el estado moroso:");
+                                    break;
+                                case 3:
+                                    txtActual.setText("Ingrese la edad:");
+                                    break;
+                                case 4:
+                                    txtActual.setText("Ingrese la antigüedad:");
+                                    break;
+                                case 5:
+                                    txtActual.setText("Ingrese el precio:");
+                                    break;
+                                case 6:
+                                    txtActual.setText("Ingrese la total de ventas:");
+                                    break;
+                                default:
+                                    break;
+                            }
                             aux = 0;
                         }
                     }
                     else if(!("".equals(arregloC)) && aux == 0){
                         for(i = 0; i <= n && !(arregloC.equalsIgnoreCase(arregloS[i])); i++);
 
-                        arregloA[i] = Integer.parseInt(txtbActual.getText());
+                        if(ej == 1){
+                            arregloA[i] = Integer.parseInt(txtbActual.getText());
+                            txtActual.setText("Ingrese el promedio del alumno:");
+                            aux = aux + 1;
+                        }
+                        else{
+                            if(ej == 2){
+                                arregloE[i] = txtbActual.getText();
+                            }
+                            else if(ej == 3 || ej == 5 || ej == 6){
+                                arregloA[i] = Integer.parseInt(txtbActual.getText());
+                            }
+                            else if(ej == 4){
+                                arregloB[i] = Integer.parseInt(txtbActual.getText());
+                            }
+                            txtActual.setText("Modificación realizada con éxito.");
+                            arregloC = "";
+                            aux = 0;
+                        }
+                        
                         txtbActual.setText("");
-                        txtActual.setText("Ingrese el promedio del alumno:");
-                        aux = aux + 1;
                     }
-                    else if(!("".equalsIgnoreCase(arregloC)) && aux == 1){
+                    else if(!("".equalsIgnoreCase(arregloC)) && aux == 1 && ej == 1){
                         for(i = 0; i <= n && !(arregloC.equalsIgnoreCase(arregloS[i])); i++);
 
                         arregloB[i] = Integer.parseInt(txtbActual.getText());
@@ -1418,7 +1487,27 @@ public class Laboratorio1 extends javax.swing.JPanel {
                 for(i = 0; i <= n && !(arregloC.equalsIgnoreCase(arregloS[i])); i++);
 
                 if(i > n){
-                    txtActual.setText("Alumno no hallado, ingrese de nuevo:");
+                    switch(ej){
+                        case 1:
+                            txtActual.setText("Alumno no hallado, ingrese de nuevo:");
+                            break;
+                        case 2:
+                            txtActual.setText("Cliente no hallado, ingrese de nuevo:");
+                            break;
+                        case 3:
+                            txtActual.setText("Empleado no hallado, ingrese de nuevo:");
+                            break;
+                        case 4:
+                            txtActual.setText("Empleado no hallado, ingrese de nuevo:");
+                            break;
+                        case 5:
+                            txtActual.setText("Dpto. no hallado, ingrese de nuevo:");
+                            break;
+                        case 6:
+                            txtActual.setText("Vendedor no hallado, ingrese de nuevo:");
+                            break;
+                    }
+                    arregloC = "";
                 }
                 else{
                     //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
