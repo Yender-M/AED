@@ -525,7 +525,12 @@ public class Laboratorio3 extends javax.swing.JPanel {
             arregloA[cuenta] = Integer.parseInt(txtbArregloEj1.getText());
             txtbArregloEj1.setText("");
             cuenta = cuenta + 1;
-            txtArregloEj1.setText("Añadir numero: " + (cuenta+1));
+            if(cuenta < tam){
+                txtArregloEj1.setText("Añadir numero: " + (cuenta+1));
+            }
+            else{
+                txtArregloEj1.setText("Añadir numero: 1");
+            }
             
             DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
             model.setColumnCount(0);
@@ -613,7 +618,18 @@ public class Laboratorio3 extends javax.swing.JPanel {
             tableLab3_Eje3.setValueAt(arregloA[cuenta], x+1 , 0);
             cuenta = cuenta + 1;
             resultado.setText("" + producto(arregloA, i, pro, tam));
-            txtArregloEj3.setText("Añadir numero: " + (cuenta+1));
+            if(cuenta < tam){
+                txtArregloEj3.setText("Añadir numero: " + (cuenta+1));
+            }
+            else{
+                txtArregloEj3.setText("Añadir numero: 1");
+                txtbArregloEj3.setText("");
+                btnArregloEj3.setEnabled(false);
+                txtbArregloEj3.setEnabled(false);
+                btnTamEj3.setEnabled(true);
+                txtbTamEj3.setEnabled(true);
+            }
+            
             x++;
         }
         else{
