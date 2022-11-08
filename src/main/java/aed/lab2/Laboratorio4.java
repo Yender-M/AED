@@ -315,8 +315,14 @@ public class Laboratorio4 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSacarMouseClicked
 
     private void btnSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarActionPerformed
+         if(cola.primero == null)
+        {
+            JOptionPane.showMessageDialog(null, "Cola vacia", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            return ;
+        }
         cola.quitar().toString();
         txtaSalida.setText(cola.toString());
+       
     }//GEN-LAST:event_btnSacarActionPerformed
 
     private void btnPushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPushActionPerformed

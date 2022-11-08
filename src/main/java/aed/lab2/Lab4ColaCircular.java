@@ -2,8 +2,8 @@
 package aed.lab2;
 
 public class Lab4ColaCircular {
-    private NodoLab4 primero;
-    private NodoLab4 ultimo;
+    public NodoLab4 primero;
+    public NodoLab4 ultimo;
     
     public Lab4ColaCircular(){
         primero = null;

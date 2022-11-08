@@ -295,7 +295,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Cliente", "Telefono", "Salario", "Est. Moroso"
+                "Cliente", "Telefono", "Saldo", "Est. Moroso"
             }
         ) {
             boolean[] canEdit = new boolean [] {
