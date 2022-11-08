@@ -15,7 +15,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
     Lab5_Eje_3_Lista_metodos ejercicio3 = new Lab5_Eje_3_Lista_metodos();
     Lab5_EJE_5 ejercicio5 =  new Lab5_EJE_5();
     List<String> pila = new ArrayList<String>();
-    int i = -1, j =-1, x =-1;
+    int i = -1, j =-1, x =-1, m=-1;
     Lab5_Eje_1_Listado ejercicio1 = new Lab5_Eje_1_Listado();
     
     @SuppressWarnings("unchecked")
@@ -34,6 +34,10 @@ public class Laboratorio5 extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableEj1 = new javax.swing.JTable();
         txtbNombre1 = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+        txtNombre2 = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
+        btnOriginal = new javax.swing.JButton();
         panelEjercicio2 = new javax.swing.JPanel();
         txtEjercicio2 = new javax.swing.JLabel();
         txtNombre1 = new javax.swing.JLabel();
@@ -79,34 +83,34 @@ public class Laboratorio5 extends javax.swing.JPanel {
 
         txtEjercicio1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEjercicio1.setText("Ejercicio 1");
-        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        panelEjercicio1.add(txtEjercicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         txtNombre.setBackground(new java.awt.Color(0, 0, 0));
         txtNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtNombre.setText("Ingrese el nombre del alumno:");
-        panelEjercicio1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        txtNombre.setText("Carrera:");
+        panelEjercicio1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         txtbCarrera.setBackground(new java.awt.Color(102, 102, 102));
         txtbCarrera.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbCarrera.setForeground(new java.awt.Color(255, 255, 255));
         txtbCarrera.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio1.add(txtbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 210, -1));
+        panelEjercicio1.add(txtbCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 210, -1));
 
         txtCarrera.setBackground(new java.awt.Color(0, 0, 0));
         txtCarrera.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtCarrera.setText("Ingrese la carrera que cursa:");
-        panelEjercicio1.add(txtCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        panelEjercicio1.add(txtCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         txtCarnet.setBackground(new java.awt.Color(0, 0, 0));
         txtCarnet.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtCarnet.setText("Ingrese el carnet del alumno:");
-        panelEjercicio1.add(txtCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+        panelEjercicio1.add(txtCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
         txtbCarnet.setBackground(new java.awt.Color(102, 102, 102));
         txtbCarnet.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbCarnet.setForeground(new java.awt.Color(255, 255, 255));
         txtbCarnet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio1.add(txtbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 210, -1));
+        panelEjercicio1.add(txtbCarnet, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 210, -1));
 
         btnAgregar1.setBackground(new java.awt.Color(153, 102, 255));
         btnAgregar1.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,7 +121,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
                 btnAgregar1ActionPerformed(evt);
             }
         });
-        panelEjercicio1.add(btnAgregar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 80, 30));
+        panelEjercicio1.add(btnAgregar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 80, 30));
 
         tableEj1.setBackground(new java.awt.Color(102, 102, 102));
         tableEj1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
@@ -140,13 +144,56 @@ public class Laboratorio5 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableEj1);
 
-        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 510, 150));
+        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 530, 150));
 
         txtbNombre1.setBackground(new java.awt.Color(102, 102, 102));
         txtbNombre1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbNombre1.setForeground(new java.awt.Color(255, 255, 255));
         txtbNombre1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio1.add(txtbNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 210, -1));
+        panelEjercicio1.add(txtbNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 210, -1));
+
+        btnBuscar.setBackground(new java.awt.Color(153, 102, 255));
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Imprimir por Carrera");
+        btnBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBuscarMouseClicked(evt);
+            }
+        });
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+        panelEjercicio1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 130, 30));
+
+        txtNombre2.setBackground(new java.awt.Color(0, 0, 0));
+        txtNombre2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtNombre2.setText("Ingrese el nombre del alumno:");
+        panelEjercicio1.add(txtNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        txtBuscar.setBackground(new java.awt.Color(102, 102, 102));
+        txtBuscar.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelEjercicio1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 180, -1));
+
+        btnOriginal.setBackground(new java.awt.Color(153, 102, 255));
+        btnOriginal.setForeground(new java.awt.Color(255, 255, 255));
+        btnOriginal.setText("Oiginal");
+        btnOriginal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOriginal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOriginalMouseClicked(evt);
+            }
+        });
+        btnOriginal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOriginalActionPerformed(evt);
+            }
+        });
+        panelEjercicio1.add(btnOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 80, 30));
 
         tpanelLaboratorio5.addTab("Ejercicio 1", panelEjercicio1);
 
@@ -540,6 +587,50 @@ public class Laboratorio5 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtbNominaActionPerformed
 
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked
+        String a = txtBuscar.getText();
+        if(a.isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        for (int x = 0; x<ejercicio1.alumno.size(); x++)   
+        {
+            if (a.contains((ejercicio1.carrera.get(x)).toString()))
+            {
+                m++;
+                DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
+                model.setRowCount(m+1);
+
+                tableEj1.setValueAt(ejercicio1.alumno.get(x), m+1 , 0);
+                tableEj1.setValueAt(ejercicio1.carrera.get(x), m+1, 1);
+                tableEj1.setValueAt(ejercicio1.carnet.get(x), m+1, 2);
+            }
+        }
+    }//GEN-LAST:event_btnBuscarMouseClicked
+
+    private void btnOriginalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOriginalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnOriginalActionPerformed
+
+    private void btnOriginalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOriginalMouseClicked
+       for (int y = 0; y == ejercicio1.alumno.size(); y++)
+       {
+            m++;
+            DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
+            model.setRowCount(ejercicio1.alumno.size());
+
+            tableEj1.setValueAt(ejercicio1.alumno.get(y), m+1 , 0);
+            tableEj1.setValueAt(ejercicio1.carrera.get(y), m+1, 1);
+            tableEj1.setValueAt(ejercicio1.carnet.get(y), m+1, 2);
+       }
+    }//GEN-LAST:event_btnOriginalMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar1;
@@ -547,7 +638,9 @@ public class Laboratorio5 extends javax.swing.JPanel {
     private javax.swing.JButton btnAgregar3;
     private javax.swing.JButton btnAgregar4;
     private javax.swing.JButton btnAgregar5;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEliminar4;
+    private javax.swing.JButton btnOriginal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -565,6 +658,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
     private javax.swing.JTable tableEj5;
     private javax.swing.JTabbedPane tpanelLaboratorio5;
     private javax.swing.JLabel txtAaa;
+    private javax.swing.JTextField txtBuscar;
     private javax.swing.JLabel txtCarnet;
     private javax.swing.JLabel txtCarrera;
     private javax.swing.JLabel txtEjercicio1;
@@ -574,6 +668,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
     private javax.swing.JLabel txtEjercicio5;
     private javax.swing.JLabel txtNombre;
     private javax.swing.JLabel txtNombre1;
+    private javax.swing.JLabel txtNombre2;
     private javax.swing.JLabel txtNombre3;
     private javax.swing.JLabel txtNombre4;
     private javax.swing.JLabel txtNumEmp;
