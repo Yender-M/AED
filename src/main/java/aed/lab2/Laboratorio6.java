@@ -14,6 +14,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     int x = 280, y = 10;
     String nodoA;
     String preorden = "", inorden = "", posorden = "";
+    int derecha = 0;
     
     public Laboratorio6() {
         initComponents();
@@ -136,7 +137,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         String[] opc = {"Sí", "No"};
         
         JFrame f = new JFrame();
-        f.setLocation(630, 480);
+        f.setLocation(400, 530);
         f.setVisible(true);
         
         int op = JOptionPane.showOptionDialog(f, "¿Tiene "+ apnodo.dato +" un hijo a la izquierda?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
@@ -145,9 +146,18 @@ public class Laboratorio6 extends javax.swing.JPanel {
         
         if(op == 0){
             h = h + 1;
-            f.setLocation(630, 480);
-            f.setVisible(true);
-            String texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+            String texto;
+            do
+            {
+                f.setLocation(400, 530);
+                f.setVisible(true);
+                texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+                if (texto.isEmpty())
+                {
+                    JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+                    texto = "";
+                }
+            }while(texto == "");
             f.setVisible(false);
             apnodo.setIzq(new Nodo(texto, null, null));
             btnsi(1, apnodo.getIzq().getDato().toString(), apnodo);
@@ -157,7 +167,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             apnodo.setIzq(null);
         }
         
-        f.setLocation(630, 480);
+        f.setLocation(400, 530);
         f.setVisible(true);
         
         op = JOptionPane.showOptionDialog(f, "¿Tiene "+ apnodo.dato +" un hijo a la derecha?", "Cliquee un botón", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opc, opc[0]);
@@ -165,12 +175,13 @@ public class Laboratorio6 extends javax.swing.JPanel {
         f.setVisible(false);
         
         if(op == 0){
-            if(apnodo.getIzq() == null && h != 1){
-                h = h + 1;
-            }
-            if(nodoA.equalsIgnoreCase(apnodo.getDato().toString()) && apnodo.getIzq() != null){
+            if(nodoA.equalsIgnoreCase(apnodo.getDato().toString()) && apnodo.getIzq() != null && derecha == 0){
                 x = 280; y = 10;
                 h = 1;
+                derecha = 1;
+            }
+            if(apnodo.getIzq() == null && h != 1){
+                h = h + 1;
             }
             if(apnodo.getIzq() != null){
                 if(apnodo.getIzq().getDer() != null && h > 1){
@@ -179,9 +190,18 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
             
             h_vieja = h;
-            f.setLocation(630, 480);
-            f.setVisible(true);
-            String texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+            String texto;
+            do
+            {
+                f.setLocation(400, 530);
+                f.setVisible(true);
+                texto = JOptionPane.showInputDialog(f, "Ingrese el nombre:");
+                if (texto.isEmpty())
+                {
+                    JOptionPane.showMessageDialog(null, "El campo de texto no puede estar vacio", "Error", JOptionPane.ERROR_MESSAGE);
+                    texto = "";
+                }
+            }while(texto == "");
             f.setVisible(false);
             apnodo.setDer(new Nodo(texto, null, null));
             btnsi(2, apnodo.getDer().getDato().toString(), apnodo);
@@ -224,23 +244,54 @@ public class Laboratorio6 extends javax.swing.JPanel {
             Lab6Graficar.Nodo(panelBoard.getGraphics(), nomn, x, y, x1, y1);
         }
         else if(lado == 2){ //Si agrega a la derecha
-            if(h == 1 && original.getIzq() != null){
+            if(h == 1 && original.getIzq() != null && derecha == 1){
                 x = x + 70; y = y + 30;
+                derecha = 2;
+                h = h + 1;
             }
             else if(h == 1 && original.getIzq() == null){
                 x = x + 70; y = y + 30;
+                h = h + 1;
+                derecha = 2;
             }
-            else if(original.getIzq().getDer() != null){
-                    if(original.getIzq().getDer().getIzq() != null && original.getIzq().getDer().getDer() == null){
-                        x = x + 30; y = 10 + ((h - 1) * 30);
-                        y1 = y1 - 30;
+            else if(original.getIzq() != null){
+                if(original.getIzq().getDer() != null){
+                    if(original.getIzq().getDer().getDer() == null && original.getIzq().getDer().getIzq() == null){
+                        y = 10 + ((h - 1) * 30) + 30;
+                        x = x + 30;
+                        x1 = x - 30;
+                        y1 = y - 30;
                     }
-                    else if(original.getIzq().getDer().getDer() != null){
+                    else if(original.getIzq().getDer().getDer() != null && original.getIzq().getDer().getIzq() == null){
+                        if(original.getIzq().getDer().getDer().getDer() != null){
+                            x = x - 30; y = 10 + ((h - 1) * 30) - 30;
+                            x1 = x - 30; y1 = y - 30;
+                        }
+                        else{
+                            y = 10 + ((h - 1) * 30);
+                            x1 = x - 30; y1 = y - 30;
+                        }
+                    }
+                    else if(original.getIzq().getDer().getDer() != null && derecha == 2){
                         y = 10 + ((h - 1) * 30) - 30;
                         x1 = x1 - 30;
                         y1 = y1 - 60;
-                    } 
+                    }
                 }
+                else{
+                    if(original.getIzq().getDer() == null && original.getIzq().getDer() == null){
+                        if(derecha == 0){
+                            y = 10 + ((h - 1) * 30) + 30;
+                        }
+                        else{
+                            y = 10 + ((h - 1) * 30);
+                        }
+                        x = x + 30;
+                        x1 = x - 30;
+                        y1 = y - 30;
+                    }
+                }
+            }
             else{
                 x = x + 30; y = y + 30;
             }
