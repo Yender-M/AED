@@ -2,6 +2,7 @@ package aed.lab2;
 
 import java.util.*;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -88,7 +89,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
         txtNombre.setBackground(new java.awt.Color(0, 0, 0));
         txtNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtNombre.setText("Carrera:");
-        panelEjercicio1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        panelEjercicio1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
         txtbCarrera.setBackground(new java.awt.Color(102, 102, 102));
         txtbCarrera.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
@@ -121,7 +122,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
                 btnAgregar1ActionPerformed(evt);
             }
         });
-        panelEjercicio1.add(btnAgregar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 80, 30));
+        panelEjercicio1.add(btnAgregar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 80, 30));
 
         tableEj1.setBackground(new java.awt.Color(102, 102, 102));
         tableEj1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
@@ -144,7 +145,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableEj1);
 
-        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 530, 150));
+        panelEjercicio1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 530, 150));
 
         txtbNombre1.setBackground(new java.awt.Color(102, 102, 102));
         txtbNombre1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
@@ -166,7 +167,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
                 btnBuscarActionPerformed(evt);
             }
         });
-        panelEjercicio1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 130, 30));
+        panelEjercicio1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 130, 30));
 
         txtNombre2.setBackground(new java.awt.Color(0, 0, 0));
         txtNombre2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -177,7 +178,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
         txtBuscar.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panelEjercicio1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 180, -1));
+        panelEjercicio1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 180, -1));
 
         btnOriginal.setBackground(new java.awt.Color(153, 102, 255));
         btnOriginal.setForeground(new java.awt.Color(255, 255, 255));
@@ -193,7 +194,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
                 btnOriginalActionPerformed(evt);
             }
         });
-        panelEjercicio1.add(btnOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 80, 30));
+        panelEjercicio1.add(btnOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 80, 30));
 
         tpanelLaboratorio5.addTab("Ejercicio 1", panelEjercicio1);
 
@@ -599,20 +600,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
             return;
         }
         
-        for (int x = 0; x < ejercicio1.alumno.size(); x++)   
-        {
-            String cadena = ejercicio1.carrera.get(x);
-            if (a.equals(cadena))
-            {
-                DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
-                model.setRowCount(m+1);
-
-                tableEj1.setValueAt(ejercicio1.alumno.get(x), m+1 , 0);
-                tableEj1.setValueAt(ejercicio1.carrera.get(x), m+1, 1);
-                tableEj1.setValueAt(ejercicio1.carnet.get(x), m+1, 2);
-                m++;
-            }
-        }
+       mostrarFiltrado(tableEj1, a);
     }//GEN-LAST:event_btnBuscarMouseClicked
 
     private void btnOriginalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOriginalActionPerformed
@@ -620,19 +608,50 @@ public class Laboratorio5 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnOriginalActionPerformed
 
     private void btnOriginalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOriginalMouseClicked
-       for (int y = 0; y <= ejercicio1.alumno.size(); y++)
-       {
-            DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
-            model.setRowCount(ejercicio1.alumno.size());
-
-            tableEj1.setValueAt(ejercicio1.alumno.get(y), m+1 , 0);
-            tableEj1.setValueAt(ejercicio1.carrera.get(y), m+1, 1);
-            tableEj1.setValueAt(ejercicio1.carnet.get(y), m+1, 2);
-            m++;
-       }
+        mostrar(tableEj1);
     }//GEN-LAST:event_btnOriginalMouseClicked
 
+     /**
+     *
+     * @param datos: JTable donde se imprimen los datos
+     * Este metodo imprime los datos que se almacenan en ArrayListAlumno en un JTable
+     */
+    
+    public void mostrar(JTable datos)
+    {
+        String nombreColumnas [] = {"Nombre", "Carrera", "Carnet"};
+        String data [][] = new String[ejercicio1.alumno.size()][nombreColumnas.length];
+        for (int y = 0 ; y < ejercicio1.alumno.size() ; y++)
+        {
+            data[y][0] = String.valueOf(ejercicio1.alumno.get(y));
+            data[y][1] = String.valueOf(ejercicio1.carrera.get(y));
+            data[y][2] = String.valueOf(ejercicio1.carnet.get(y));
+        }
+       datos.setModel(new DefaultTableModel(data, nombreColumnas));
+    }
+    /**
+     *
+     * @param datos: JTable donde se imprimen los datos
+     * @param item: string de la carrera en un combobox
+     * Este metodo imprime los datos filtrados por carrera que se almacenan en ArrayListAlumno en un JTable
+     */
+    public void mostrarFiltrado(JTable datos, String item)
+    {
+        String nombreColumnas [] = {"Nombre", "Carrera", "Carnet"};
+        String data [][] = new String[ejercicio1.alumno.size()][nombreColumnas.length];
+        int count = 0;
+        for (int i = 0 ; i < ejercicio1.alumno.size() ; i++)
+        {
+            if(!item.equalsIgnoreCase(ejercicio1.carrera.get(i)))
+                continue;
 
+            data[count][0] = String.valueOf(ejercicio1.alumno.get(i));
+            data[count][1] = String.valueOf(ejercicio1.carrera.get(i));
+            data[count][2] = String.valueOf(ejercicio1.carnet.get(i));
+            count++;
+        }
+       datos.setModel(new DefaultTableModel(data, nombreColumnas));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar1;
     private javax.swing.JButton btnAgregar2;
