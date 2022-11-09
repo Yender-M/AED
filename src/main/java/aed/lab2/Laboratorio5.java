@@ -600,7 +600,8 @@ public class Laboratorio5 extends javax.swing.JPanel {
             return;
         }
         
-       mostrarFiltrado(tableEj1, a);
+        mostrarFiltrado(tableEj1, a);
+        txtBuscar.setText("");
     }//GEN-LAST:event_btnBuscarMouseClicked
 
     private void btnOriginalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOriginalActionPerformed
@@ -611,12 +612,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         mostrar(tableEj1);
     }//GEN-LAST:event_btnOriginalMouseClicked
 
-     /**
-     *
-     * @param datos: JTable donde se imprimen los datos
-     * Este metodo imprime los datos que se almacenan en ArrayListAlumno en un JTable
-     */
-    
     public void mostrar(JTable datos)
     {
         String nombreColumnas [] = {"Nombre", "Carrera", "Carnet"};
@@ -629,12 +624,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
         }
        datos.setModel(new DefaultTableModel(data, nombreColumnas));
     }
-    /**
-     *
-     * @param datos: JTable donde se imprimen los datos
-     * @param item: string de la carrera en un combobox
-     * Este metodo imprime los datos filtrados por carrera que se almacenan en ArrayListAlumno en un JTable
-     */
+    
     public void mostrarFiltrado(JTable datos, String item)
     {
         String nombreColumnas [] = {"Nombre", "Carrera", "Carnet"};
@@ -644,7 +634,6 @@ public class Laboratorio5 extends javax.swing.JPanel {
         {
             if(!item.equalsIgnoreCase(ejercicio1.carrera.get(i)))
                 continue;
-
             data[count][0] = String.valueOf(ejercicio1.alumno.get(i));
             data[count][1] = String.valueOf(ejercicio1.carrera.get(i));
             data[count][2] = String.valueOf(ejercicio1.carnet.get(i));

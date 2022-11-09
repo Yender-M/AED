@@ -302,6 +302,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
     private void preorden(Nodo nodo){
         if(nodo != null){
             preorden += nodo.getDato().toString();
+            preorden += " ";
             preorden(nodo.getIzq());
             preorden(nodo.getDer());
         }
@@ -311,6 +312,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
         if(nodo != null){
             inorden(nodo.getIzq());
             inorden += nodo.getDato().toString();
+            inorden += " ";
             inorden(nodo.getDer());
         }
     }
@@ -320,6 +322,7 @@ public class Laboratorio6 extends javax.swing.JPanel {
             posorden(nodo.getIzq());
             posorden(nodo.getDer());
             posorden += nodo.getDato().toString();
+            posorden += " ";
         }
     }
     
