@@ -15,7 +15,7 @@ public class Laboratorio5 extends javax.swing.JPanel {
     Lab5_Eje_3_Lista_metodos ejercicio3 = new Lab5_Eje_3_Lista_metodos();
     Lab5_EJE_5 ejercicio5 =  new Lab5_EJE_5();
     List<String> pila = new ArrayList<String>();
-    int i = -1, j =-1, x =-1, m=-1;
+    int i = -1, j =-1, x =-1, m=0;
     Lab5_Eje_1_Listado ejercicio1 = new Lab5_Eje_1_Listado();
     
     @SuppressWarnings("unchecked")
@@ -599,17 +599,18 @@ public class Laboratorio5 extends javax.swing.JPanel {
             return;
         }
         
-        for (int x = 0; x<ejercicio1.alumno.size(); x++)   
+        for (int x = 0; x < ejercicio1.alumno.size(); x++)   
         {
-            if (a.contains((ejercicio1.carrera.get(x)).toString()))
+            String cadena = ejercicio1.carrera.get(x);
+            if (a.equals(cadena))
             {
-                m++;
                 DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
                 model.setRowCount(m+1);
 
                 tableEj1.setValueAt(ejercicio1.alumno.get(x), m+1 , 0);
                 tableEj1.setValueAt(ejercicio1.carrera.get(x), m+1, 1);
                 tableEj1.setValueAt(ejercicio1.carnet.get(x), m+1, 2);
+                m++;
             }
         }
     }//GEN-LAST:event_btnBuscarMouseClicked
@@ -619,15 +620,15 @@ public class Laboratorio5 extends javax.swing.JPanel {
     }//GEN-LAST:event_btnOriginalActionPerformed
 
     private void btnOriginalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOriginalMouseClicked
-       for (int y = 0; y == ejercicio1.alumno.size(); y++)
+       for (int y = 0; y <= ejercicio1.alumno.size(); y++)
        {
-            m++;
             DefaultTableModel model = (DefaultTableModel) tableEj1.getModel();
             model.setRowCount(ejercicio1.alumno.size());
 
             tableEj1.setValueAt(ejercicio1.alumno.get(y), m+1 , 0);
             tableEj1.setValueAt(ejercicio1.carrera.get(y), m+1, 1);
             tableEj1.setValueAt(ejercicio1.carnet.get(y), m+1, 2);
+            m++;
        }
     }//GEN-LAST:event_btnOriginalMouseClicked
 
