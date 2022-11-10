@@ -256,8 +256,11 @@ public class Laboratorio6 extends javax.swing.JPanel {
             }
             else if(original.getIzq() != null){
                 if(original.getIzq().getDer() != null){
-                    if(original.getIzq().getDer().getDer() == null && original.getIzq().getDer().getIzq() == null){
-                        y = 10 + ((h - 1) * 30) + 30;
+                    if(original.getIzq().getDer().getDer() == null){
+                        y = 10 + ((h - 1) * 30);
+                        if(original.getIzq().getDer().getIzq() == null){
+                            y = y + 30;
+                        }
                         x = x + 30;
                         x1 = x - 30;
                         y1 = y - 30;
