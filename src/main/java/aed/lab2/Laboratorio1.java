@@ -1507,7 +1507,6 @@ public class Laboratorio1 extends javax.swing.JPanel {
                             txtActual.setText("Vendedor no hallado, ingrese de nuevo:");
                             break;
                     }
-                    arregloC = "";
                 }
                 else{
                     //Crea una tabla modificada para agregar en tiempo real el arreglo en función del tamaño de este
@@ -1564,6 +1563,7 @@ public class Laboratorio1 extends javax.swing.JPanel {
                             break;
                     }
                 }
+                arregloC = "";
                 break;
             default:
                 break;
