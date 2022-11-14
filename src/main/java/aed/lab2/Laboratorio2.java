@@ -121,13 +121,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamBurbuja.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamBurbuja.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamBurbuja.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelBurbuja.add(txtbTamBurbuja, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 190, -1));
 
         btnTamBurbuja.setBackground(new java.awt.Color(153, 102, 255));
         btnTamBurbuja.setForeground(new java.awt.Color(255, 255, 255));
         btnTamBurbuja.setText("Aceptar");
-        btnTamBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamBurbuja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamBurbujaMouseClicked(evt);
@@ -143,14 +143,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloBurbuja.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloBurbuja.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloBurbuja.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloBurbuja.setEnabled(false);
         panelBurbuja.add(txtbArregloBurbuja, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
 
         btnArregloBurbuja.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloBurbuja.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloBurbuja.setText("Aceptar");
-        btnArregloBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloBurbuja.setEnabled(false);
         btnArregloBurbuja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -181,7 +181,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnOrdenarBurbuja.setBackground(new java.awt.Color(153, 102, 255));
         btnOrdenarBurbuja.setForeground(new java.awt.Color(255, 255, 255));
         btnOrdenarBurbuja.setText("Ordenar Arreglo");
-        btnOrdenarBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOrdenarBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOrdenarBurbuja.setEnabled(false);
         btnOrdenarBurbuja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -193,7 +193,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnDesordenarBurbuja.setBackground(new java.awt.Color(153, 102, 255));
         btnDesordenarBurbuja.setForeground(new java.awt.Color(255, 255, 255));
         btnDesordenarBurbuja.setText("Ver Original");
-        btnDesordenarBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDesordenarBurbuja.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnDesordenarBurbuja.setEnabled(false);
         btnDesordenarBurbuja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -219,13 +219,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamInsercion.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamInsercion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamInsercion.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelInsercion.add(txtbTamInsercion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 190, -1));
 
         btnTamInsercion.setBackground(new java.awt.Color(153, 102, 255));
         btnTamInsercion.setForeground(new java.awt.Color(255, 255, 255));
         btnTamInsercion.setText("Aceptar");
-        btnTamInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamInsercion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamInsercionMouseClicked(evt);
@@ -241,14 +241,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloInsercion.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloInsercion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloInsercion.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloInsercion.setEnabled(false);
         panelInsercion.add(txtbArregloInsercion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
 
         btnArregloInsercion.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloInsercion.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloInsercion.setText("Aceptar");
-        btnArregloInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloInsercion.setEnabled(false);
         btnArregloInsercion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -275,7 +275,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnOrdenarInsercion.setBackground(new java.awt.Color(153, 102, 255));
         btnOrdenarInsercion.setForeground(new java.awt.Color(255, 255, 255));
         btnOrdenarInsercion.setText("Ordenar Arreglo");
-        btnOrdenarInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOrdenarInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOrdenarInsercion.setEnabled(false);
         btnOrdenarInsercion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -287,7 +287,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnDesordenarInsercion.setBackground(new java.awt.Color(153, 102, 255));
         btnDesordenarInsercion.setForeground(new java.awt.Color(255, 255, 255));
         btnDesordenarInsercion.setText("Ver Original");
-        btnDesordenarInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDesordenarInsercion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnDesordenarInsercion.setEnabled(false);
         btnDesordenarInsercion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -317,13 +317,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamShell.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamShell.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamShell.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelShell.add(txtbTamShell, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 190, -1));
 
         btnTamShell.setBackground(new java.awt.Color(153, 102, 255));
         btnTamShell.setForeground(new java.awt.Color(255, 255, 255));
         btnTamShell.setText("Aceptar");
-        btnTamShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamShell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamShellMouseClicked(evt);
@@ -339,14 +339,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloShell.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloShell.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloShell.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloShell.setEnabled(false);
         panelShell.add(txtbArregloShell, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
 
         btnArregloShell.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloShell.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloShell.setText("Aceptar");
-        btnArregloShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloShell.setEnabled(false);
         btnArregloShell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -373,7 +373,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnOrdenarShell.setBackground(new java.awt.Color(153, 102, 255));
         btnOrdenarShell.setForeground(new java.awt.Color(255, 255, 255));
         btnOrdenarShell.setText("Ordenar Arreglo");
-        btnOrdenarShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOrdenarShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOrdenarShell.setEnabled(false);
         btnOrdenarShell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -384,8 +384,8 @@ public class Laboratorio2 extends javax.swing.JPanel {
 
         btnDesordenarShell.setBackground(new java.awt.Color(153, 102, 255));
         btnDesordenarShell.setForeground(new java.awt.Color(255, 255, 255));
-        btnDesordenarShell.setText("Ordenar Arreglo");
-        btnDesordenarShell.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDesordenarShell.setText("Ver Original");
+        btnDesordenarShell.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnDesordenarShell.setEnabled(false);
         btnDesordenarShell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -415,13 +415,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamSeleccion.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamSeleccion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamSeleccion.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelSeleccion.add(txtbTamSeleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 190, -1));
 
         btnTamSeleccion.setBackground(new java.awt.Color(153, 102, 255));
         btnTamSeleccion.setForeground(new java.awt.Color(255, 255, 255));
         btnTamSeleccion.setText("Aceptar");
-        btnTamSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamSeleccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamSeleccionMouseClicked(evt);
@@ -437,14 +437,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloSeleccion.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloSeleccion.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloSeleccion.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloSeleccion.setEnabled(false);
         panelSeleccion.add(txtbArregloSeleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
 
         btnArregloSeleccion.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloSeleccion.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloSeleccion.setText("Aceptar");
-        btnArregloSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloSeleccion.setEnabled(false);
         btnArregloSeleccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -471,7 +471,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnOrdenarSeleccion.setBackground(new java.awt.Color(153, 102, 255));
         btnOrdenarSeleccion.setForeground(new java.awt.Color(255, 255, 255));
         btnOrdenarSeleccion.setText("Ordenar Arreglo");
-        btnOrdenarSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOrdenarSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOrdenarSeleccion.setEnabled(false);
         btnOrdenarSeleccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -483,7 +483,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnDesordenarSeleccion.setBackground(new java.awt.Color(153, 102, 255));
         btnDesordenarSeleccion.setForeground(new java.awt.Color(255, 255, 255));
         btnDesordenarSeleccion.setText("Ver Original");
-        btnDesordenarSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDesordenarSeleccion.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnDesordenarSeleccion.setEnabled(false);
         btnDesordenarSeleccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -513,13 +513,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamSacudida.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamSacudida.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamSacudida.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelSacudida.add(txtbTamSacudida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 190, -1));
 
         btnTamSacudida.setBackground(new java.awt.Color(153, 102, 255));
         btnTamSacudida.setForeground(new java.awt.Color(255, 255, 255));
         btnTamSacudida.setText("Aceptar");
-        btnTamSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamSacudida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamSacudidaMouseClicked(evt);
@@ -535,14 +535,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloSacudida.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloSacudida.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloSacudida.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloSacudida.setEnabled(false);
         panelSacudida.add(txtbArregloSacudida, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
 
         btnArregloSacudida.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloSacudida.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloSacudida.setText("Aceptar");
-        btnArregloSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloSacudida.setEnabled(false);
         btnArregloSacudida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -569,7 +569,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnOrdenarSacudida.setBackground(new java.awt.Color(153, 102, 255));
         btnOrdenarSacudida.setForeground(new java.awt.Color(255, 255, 255));
         btnOrdenarSacudida.setText("Ordenar Arreglo");
-        btnOrdenarSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOrdenarSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOrdenarSacudida.setEnabled(false);
         btnOrdenarSacudida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -581,7 +581,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnDesordenarSacudida.setBackground(new java.awt.Color(153, 102, 255));
         btnDesordenarSacudida.setForeground(new java.awt.Color(255, 255, 255));
         btnDesordenarSacudida.setText("Ordenar Arreglo");
-        btnDesordenarSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnDesordenarSacudida.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnDesordenarSacudida.setEnabled(false);
         btnDesordenarSacudida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -611,13 +611,13 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbTamBusqueda.setBackground(new java.awt.Color(102, 102, 102));
         txtbTamBusqueda.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbTamBusqueda.setForeground(new java.awt.Color(255, 255, 255));
-        txtbTamBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbTamBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         panelBusqueda.add(txtbTamBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, -1));
 
         btnTamBusqueda.setBackground(new java.awt.Color(153, 102, 255));
         btnTamBusqueda.setForeground(new java.awt.Color(255, 255, 255));
         btnTamBusqueda.setText("Aceptar");
-        btnTamBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnTamBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnTamBusqueda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTamBusquedaMouseClicked(evt);
@@ -633,14 +633,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbArregloBusqueda.setBackground(new java.awt.Color(102, 102, 102));
         txtbArregloBusqueda.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbArregloBusqueda.setForeground(new java.awt.Color(255, 255, 255));
-        txtbArregloBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbArregloBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbArregloBusqueda.setEnabled(false);
         panelBusqueda.add(txtbArregloBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 190, -1));
 
         btnArregloBusqueda.setBackground(new java.awt.Color(153, 102, 255));
         btnArregloBusqueda.setForeground(new java.awt.Color(255, 255, 255));
         btnArregloBusqueda.setText("Aceptar");
-        btnArregloBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnArregloBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnArregloBusqueda.setEnabled(false);
         btnArregloBusqueda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -667,7 +667,7 @@ public class Laboratorio2 extends javax.swing.JPanel {
         btnBusqueda.setBackground(new java.awt.Color(153, 102, 255));
         btnBusqueda.setForeground(new java.awt.Color(255, 255, 255));
         btnBusqueda.setText("Buscar");
-        btnBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnBusqueda.setEnabled(false);
         btnBusqueda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -683,14 +683,14 @@ public class Laboratorio2 extends javax.swing.JPanel {
         txtbBusqueda.setBackground(new java.awt.Color(102, 102, 102));
         txtbBusqueda.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         txtbBusqueda.setForeground(new java.awt.Color(255, 255, 255));
-        txtbBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtbBusqueda.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         txtbBusqueda.setEnabled(false);
         panelBusqueda.add(txtbBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 190, -1));
 
         btnOriginal.setBackground(new java.awt.Color(153, 102, 255));
         btnOriginal.setForeground(new java.awt.Color(255, 255, 255));
         btnOriginal.setText("Original");
-        btnOriginal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnOriginal.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnOriginal.setEnabled(false);
         btnOriginal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
